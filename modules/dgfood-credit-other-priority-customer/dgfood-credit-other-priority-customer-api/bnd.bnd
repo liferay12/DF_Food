@@ -1,0 +1,11 @@
+Bundle-Name: dgfood-credit-other-priority-customer-api
+Bundle-SymbolicName: bd.gov.dgfood.credit.other.priority.customer.api
+Bundle-Version: 1.0.0
+Export-Package: \
+	bd.gov.dgfood.credit.other.priority.customer.exception,\
+	bd.gov.dgfood.credit.other.priority.customer.model,\
+	bd.gov.dgfood.credit.other.priority.customer.service,\
+	bd.gov.dgfood.credit.other.priority.customer.service.persistence,\
+	bd.gov.dgfood.credit.other.priority.customer.constants
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../dgfood-credit-other-priority-customer-service/service.xml

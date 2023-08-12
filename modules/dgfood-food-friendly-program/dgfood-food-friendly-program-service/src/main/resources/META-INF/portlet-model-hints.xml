@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="bd.gov.dgfood.food.friendly.program.model.FFPBeneficiary">
+		<field name="uuid" type="String" />
+		<field name="beneficiaryId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="version" type="double" />
+		<field name="name" type="String" />
+		<field name="mobileNumber" type="String" />
+		<field name="nationalId" type="long" />
+		<field name="emailAddress" type="String" />
+		<field name="cardNumber" type="String" />
+		<field name="dateOfBirth" type="Date" />
+		<field name="gender" type="int" />
+		<field name="fatherName" type="String" />
+		<field name="motherName" type="String" />
+		<field name="maritalStatus" type="int" />
+		<field name="spouseName" type="String" />
+		<field name="spouseFatherName" type="String" />
+		<field name="spouseDateOfBirth" type="Date" />
+		<field name="spouseNationalId" type="long" />
+		<field name="familyAverageMonthlyIncome" type="String" />
+		<field name="familyEarningMembers" type="int" />
+		<field name="acknowledge" type="boolean" />
+		<field name="nonOfMyFamilyMembersRegistered" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="bd.gov.dgfood.food.friendly.program.model.FFPBeneficiaryVersion">
+		<field name="beneficiaryVersionId" type="long" />
+		<field name="beneficiaryId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="version" type="double" />
+		<field name="name" type="String" />
+		<field name="mobileNumber" type="String" />
+		<field name="nationalId" type="long" />
+		<field name="emailAddress" type="String" />
+		<field name="cardNumber" type="String" />
+		<field name="dateOfBirth" type="Date" />
+		<field name="gender" type="int" />
+		<field name="fatherName" type="String" />
+		<field name="motherName" type="String" />
+		<field name="maritalStatus" type="int" />
+		<field name="spouseName" type="String" />
+		<field name="spouseFatherName" type="String" />
+		<field name="spouseDateOfBirth" type="Date" />
+		<field name="spouseNationalId" type="long" />
+		<field name="familyAverageMonthlyIncome" type="String" />
+		<field name="familyEarningMembers" type="int" />
+		<field name="acknowledge" type="boolean" />
+		<field name="nonOfMyFamilyMembersRegistered" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+	</model>
+</model-hints>

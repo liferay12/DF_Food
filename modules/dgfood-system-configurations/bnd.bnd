@@ -1,0 +1,9 @@
+Bundle-Name: dgfood-system-configurations
+Bundle-SymbolicName: dgfood.system.configurations
+Bundle-Version: 1.0.0
+-metatype: *
+Export-Package: \
+	bd.gov.dgfood.configuration.bean,\
+	bd.gov.dgfood.configuration.category,\
+	bd.gov.dgfood.configuration.mvc.action.command,\
+	bd.gov.dgfood.configuration

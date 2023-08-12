@@ -1,0 +1,10 @@
+Bundle-Name: dgfood-common-services-api
+Bundle-SymbolicName: bd.gov.dgfood.common.services.api
+Bundle-Version: 1.0.0
+Export-Package: \
+	bd.gov.dgfood.common.services.exception,\
+	bd.gov.dgfood.common.services.model,\
+	bd.gov.dgfood.common.services.service,\
+	bd.gov.dgfood.common.services.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../dgfood-common-services-service/service.xml

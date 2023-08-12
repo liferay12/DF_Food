@@ -1,0 +1,6 @@
+Bundle-Name: dgfood-headless-user-authentication-api
+Bundle-SymbolicName: bd.gov.dgfood.headless.user.authentication.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	bd.gov.dgfood.headless.user.authentication.dto.v1_0,\
+	bd.gov.dgfood.headless.user.authentication.resource.v1_0

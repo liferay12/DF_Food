@@ -1,0 +1,74 @@
+components:
+  schemas:
+    UserAuthenticationRequestData:
+      description: 'To authenticate a user by the given credentials'
+      properties:
+        userName:
+          description: User login id
+          type: string
+        password: 
+          description: Password for the user id
+          type: string
+        authType:
+          description: Authentication type like ScreenName Email Address or User Id
+          type: string
+      type: object
+    UserAuthenticationResponseData:
+      description: 'Response for requested user authentication'
+      properties:
+        authenticationResult:
+          description: error Code for the request
+          type: string
+        screenName:
+          description: user screen name
+          type: string
+        emailAddress:
+          description: user email address
+          type: string
+        fullName:
+          description: Name of the user
+          type: string
+        errorCode:
+          description: Error code for the request
+          type: string
+        errorMessage:
+          description: Error message for the request
+          type: string
+      type: object
+
+info:
+    description: "DgfoodHeadlessUserAuthentication REST API"
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "DgfoodHeadlessUserAuthentication"
+    version: v1.0
+openapi: 3.0.1
+servers:
+- url: http://localhost:8073/o/dgfood-headless-user-authentication/v1.0/
+  description: SwaggerHub API Auto Mocking
+- url: http://localhost:8073/o/dgfood-headless-user-authentication/v1.0/
+
+paths:
+  "/authenticate-user":
+    post:
+      description: To Authenticate the user using the credentials
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserAuthenticationRequestData'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/UserAuthenticationRequestData'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserAuthenticationResponseData'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/UserAuthenticationResponseData'
+          description: ''
+      tags: ["UserAuthenticationRequest"]

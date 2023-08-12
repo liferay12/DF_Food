@@ -1,0 +1,27 @@
+dependencies {
+	compile project(":modules:dgfood-license-management-system:dgfood-headless-license-management-system:dgfood-headless-license-management-system-api")
+	compileOnly project(":modules:dgfood-license-management-system:dgfood-license-management-system-api")
+	compileOnly project(":modules:dgfood-common-services:dgfood-common-services-api")
+	compileOnly project(":modules:dgfood-common-util")
+	compileOnly project(":modules:dgfood-taglib")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	compileOnly group: "javax.annotation", name: "javax.annotation-api", version: "1.3.2"
+	compileOnly group: "org.osgi", name: "org.osgi.service.jaxrs", version: "1.0.0"
+	compileInclude group: "org.apache.commons", name: "commons-lang3", version: "3.0"
+		compileOnly group: "javax.mail", name: "mail", version: "1.4.1"
+}
+
+buildscript {
+	dependencies {
+		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.rest.builder", version: "1.0.114"
+	}
+
+	repositories {
+		maven {
+			url "https://repository-cdn.liferay.com/nexus/content/groups/public"
+		}
+	}
+}
+
+group = "dgfood.headless.license.management.system"

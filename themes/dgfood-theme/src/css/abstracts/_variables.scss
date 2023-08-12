@@ -1,0 +1,99 @@
+:root {
+    --bg-black: #000000;
+    --body-color: #111111;
+    --bg-body: #ffffff;
+    --primary-color-one: #5BB600;
+    --primary-color-two: #E5B23C;
+    --neutral-color-one: #111111;
+    --neutral-color-two: #ACACAC;
+    --neutral-color-three: #D9D8D6;
+    --neutral-color-four: #F2F2F2;
+    --neutral-color-light: #F8FFF1;
+    --neutral-color-dark: #E5FFCB;
+    --gradient-color-one: #5BB600;
+    --gradient-color-two: #387100;
+    --gradient-color-three: #E5B23C;
+    --gradient-color-four: #BB8812;
+    --dark-green-color: #478D00;
+    --dark-green-light: #6ca433;
+    --white-color: #ffffff;
+    --bg-light-color: #f5f5f5;
+    --bg-footer: #252525;
+    --gray-color: #797979;
+    --bg-dashboard: #343434;
+    --bg-resolved: #FFFBEA;
+    --bg-challan: #D9EFFF;
+    --color-challan: #0D76D8;
+    --color-approve: #832FD8;
+    --color-rejected: #EB0505;
+    --color-issued: #149200;
+    --red-color: #FB4949;
+    --bg-light-green: #F6FFED;
+    --border-gray: #D6D6D6;
+    --bg-light-gray: #F1F1F1;
+    --bg-error: #FFF1F1;
+    --border-error: #F40000;
+}
+
+$body-color: var(--body-color);
+$bg-black: var(--bg-black);
+$body-color: var(--body-color);
+$bg-body: var(--bg-body);
+$primary-color-one: var(--primary-color-one);
+$primary-color-two: var(--primary-color-two);
+$neutral-color-one: var(--neutral-color-one);
+$neutral-color-two: var(--neutral-color-two);
+$neutral-color-three: var(--neutral-color-three);
+$neutral-color-four: var(--neutral-color-four);
+$neutral-color-light: var(--neutral-color-light);
+$neutral-color-dark: var(--neutral-color-dark);
+$gradient-color-one: var(--gradient-color-one);
+$gradient-color-two: var(--gradient-color-two);
+$gradient-color-three: var(--gradient-color-three);
+$gradient-color-four: var(--gradient-color-four);
+$dark-green-color: var(--dark-green-color);
+$dark-green-light: var(--dark-green-light);
+$white-color: var(--white-color);
+$bg-light-color: var(--bg-light-color);
+$bg-footer: var(--bg-footer);
+$gray-color: var(--gray-color);
+$bg-dashboard: var(--bg-dashboard);
+$bg-resolved: var(--bg-resolved);
+$bg-challan: var(--bg-challan);
+$color-challan: var(--bg-black);
+$color-approve: var(--color-approve);
+$color-rejected: var(--color-rejected);
+$color-issued: var(--color-issued);
+$red-color: var(--red-color);
+$bg-light-green: var(--bg-light-green);
+$border-gray: var(--border-gray);
+$bg-light-gray: var(--bg-black);
+$bg-error: var(--bg-error);
+$border-error: var(--border-error);
+
+$font-size14: 14px;
+$body-font: 16px;
+$transition: 0.5s;
+$uppercase: uppercase;
+$capitalize: capitalize;
+$font-weight-bold: 700;
+$font-weight1: 600;
+$font-weight2: 500;
+
+
+
+@font-face {
+    font-family: 'Helvetica', sans-serif;
+    src: url('/fonts/Helvetica.ttf');
+}
+
+/* 
+:root {
+    @include createCSSVariables($color, 'bg-color');
+    @include createCSSVariables($color, 'text-color');
+
+    @include createCSSVariables($font-family-en, 'font-family');
+    @include createCSSVariables($font-size, 'font-size');
+
+}
+ */

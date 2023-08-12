@@ -1,0 +1,10 @@
+Bundle-Name: dgfood-farmer-information-management-system-api
+Bundle-SymbolicName: bd.gov.dgfood.farmer.information.management.system.api
+Bundle-Version: 1.0.0
+Export-Package: \
+	bd.gov.dgfood.farmer.information.management.system.exception,\
+	bd.gov.dgfood.farmer.information.management.system.model,\
+	bd.gov.dgfood.farmer.information.management.system.service,\
+	bd.gov.dgfood.farmer.information.management.system.service.persistence,\
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../dgfood-farmer-information-management-system-service/service.xml

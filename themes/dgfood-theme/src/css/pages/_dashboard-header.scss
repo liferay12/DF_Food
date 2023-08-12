@@ -1,0 +1,1002 @@
+
+/*--- deshboardHearder css ---*/
+
+
+.deshbordMain{
+    .deshbordHeader{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        background-color: $primary-color-one;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        z-index: 99;
+        box-shadow: 0 4px 40px 0 #00000012;
+        transition: $transition;
+        .hamburger{
+            width: 14px;
+            height: fit-content;
+            min-height: 12px;
+            background-color: transparent;
+            padding: 0;
+            border: none;
+            outline: none;
+            .line{
+                width: 15px;
+                height: 2px;
+                border-radius: 5px;
+                background-color: $white-color;
+                display: block;
+                transition: $transition;
+                &:nth-child(2){
+                    margin: 3px 0;
+                }
+            }
+            &.is-active{
+                transition: all 0.3s ease-in-out;
+                transition-delay: 0.6s;
+                transform: rotate(45deg);
+                .line{
+                    &:nth-child(1){
+                        transform: translateY(1px);
+                        transition-delay: 0.3s;
+                    }
+                    &:nth-child(2){
+                        width: 0px;    
+                        height: 0;
+                        margin: 0;
+                        transition-delay: 0.3s;
+                    }
+                    &:nth-child(3){
+                        transform: translateY(-1px) rotate(90deg);
+                        transition-delay: 0.3s;
+                    }
+                }
+            }
+        }
+        .deshbordHeaderLogo{
+            width: 280px;
+            height: 65px;
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 30px;
+            box-shadow: 4px 0 40px 0 #00000012;
+            transition: $transition;
+            .logo{
+                transition: $transition;
+            }
+        }
+        .deshbordHeader-content{
+            width: calc(100% - 280px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: $transition;
+            padding: 0px 26px;
+            .headerContent-left{
+                h6{
+                    color: $white-color;
+                }
+            }
+            .headerContent-right{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                column-gap: 25px;
+                .list{
+                    display: flex;
+                    column-gap: 20px;
+                    .myDropdown {
+                        .dropdownList{
+                            top: 45px;
+                        }
+                    }
+                    .dash-notify-drop{
+                        position: relative;
+                        .dash-notification-box-wrapper{
+                            position: absolute;
+                            top: 44px;
+                            right: 0;
+                            width: 450px;
+                            background-color: $white-color;
+                            border-radius: 6px;
+                            border-top-left-radius: 0;
+                            border-top-right-radius: 0;
+                            padding: 24px;
+                            display: none;
+                            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
+                            z-index: 9999;
+                           
+                                .notify-box{
+                                    display: flex;
+                                    gap: 16px;
+                                    background-color: $neutral-color-light;
+                                    padding: 12px;
+                                    border: 1px solid $primary-color-one;
+                                    border-radius: 6px;
+                                    margin-bottom: 12px;
+                                    transition: $transition;
+                                        .noti-icon{
+                                            span{
+                                                display: inline-block;
+                                                width: 60px;
+                                                height: 60px;
+                                                line-height: 54px;
+                                                text-align: center;
+                                                border: 1px solid $primary-color-one;
+                                                border-radius: 50px;
+                                                svg{
+                                                    stroke: $primary-color-one;
+                                                }
+                                            }
+                                        }
+                                        .noti-text{
+                                            h4{
+                                                font-size: 16px;
+                                            }
+                                            p{
+                                                font-size: 14px;
+                                               
+                                            }
+                                            a{
+                                                color: $primary-color-one;
+                                                padding-left: 0;
+                                                line-height: inherit;
+                                            }
+                                        }
+                                        &:hover{
+                                            background-color: $white-color;
+                                            transition: $transition;
+                                        }
+                                }
+                                .view-all-btn{
+                                    text-align: center;
+                                        a{
+                                            font-weight: $font-weight1;
+                                                &:hover{
+                                                    color: $primary-color-one;
+                                                }
+                                        }
+                                }
+                        }
+                       
+                    }
+                }
+                .profile-dropdown{
+                    position: relative;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        column-gap: 7px;
+                        img{
+                            border-radius: 50px;
+                        }
+                        p{
+                            color: $white-color;
+                            line-height: 20px;
+                            span{
+                                font-size: 14px;
+                            }
+                            svg{
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                    .submenu{
+                        position: absolute;
+                        background-color: #ffffff;
+                        width: 130px;
+                        box-shadow: 0px 0px 12px #00000029;
+                        border-radius: 5px;
+                        
+                        left: 0;
+                        top: 50px;
+                        display: none;
+                        z-index: 11;
+                            li{
+                                a{
+                                    padding:10px;
+                                    span{
+                                        display: inline-block;
+                                        padding-right: 4px;
+                                        svg{
+                                            fill: $bg-black;
+                                        }
+                                    }
+                                        &:hover{
+                                            background-color: #efefef;
+                                        }
+                                }
+                            }
+                    }
+                   
+                }
+            }
+        }
+    }
+}
+
+
+/*--- deshboardSidemenu css ---*/
+
+.deshbordMain{
+    .deshbordMaincontant{
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        .deshbordSidebar{
+            width: 280px;
+            min-width: 280px;
+            height: calc(100% - 59.36px);
+            padding-top: 30px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            background-color: $white-color;
+            z-index: 4;
+            box-shadow: 4px 0 40px 0 #00000012;
+            transition: $transition;
+            .sidebarContent{
+                padding: 30px 0px;
+                .sidebar-gap{
+                    padding: 0 20px;
+                    .license-dropdown{
+                        .license-sidebar{
+                            position: relative;
+                                li{
+                                    a{
+                                        background-color: $primary-color-two;
+                                        border-bottom-left-radius: 0;
+                                        border-bottom-right-radius: 0;
+                                    }
+                                    .license-subdropdown{
+                                        display: none;
+                                        position: absolute;
+                                        width: 100%;
+                                        z-index: 11;
+                                        background: $white-color;
+                                        border: 1px solid $primary-color-two;
+                                        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+                                        border-radius: 0px 0px 5px 5px;
+                                        padding: 10px 14px 20px;
+                                        li{
+                                            a{
+                                                background-color: $primary-color-two;
+                                                color: $white-color;
+                                                border-bottom-left-radius: 5px;
+                                                border-bottom-right-radius: 5px;
+                                                border: 1px solid $primary-color-two;
+                                                padding: 8px 15px;
+                                                &::after{
+                                                    display: none;
+                                                }
+                                                &:hover{
+                                                    background-color: transparent;
+                                                    color: $primary-color-two;
+                                                }
+                                            }
+                                            &.green-bg{
+                                                a{
+                                                    background-color: $primary-color-one;
+                                                    border: 1px solid $primary-color-one;
+                                                    &:hover{
+                                                        background-color: transparent;
+                                                        color: $primary-color-one;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            
+                        }
+                    }
+                }
+                .sidebarList{
+                    li {
+                        margin-top: 10px;
+                        > a{ 
+                            display: flex;
+                            align-items: center;
+                            column-gap: 15px;
+                            width: 100%;
+                            padding: 12px 15px;
+                            border-radius: 6px;
+                            font-weight: 700;
+                            font-size: 14px;
+                            transition: $transition;
+                            .icon{
+                                svg{
+                                    transition: $transition;
+                                    fill: $body-color;
+                                }
+                            }
+                            &.active{
+                                background-color: $primary-color-one;
+                                color: $white-color;
+                                .icon{
+                                    svg{
+                                        fill: $white-color;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover , &.active{
+                            > a{
+                                background-color: $primary-color-one;
+                                color: $white-color;
+                                .icon{
+                                    svg{
+                                        fill: $white-color;
+                                    }
+                                }
+                            }
+                        }
+                        &.submenuDropdown{
+                            #submenuClick{
+                                position: relative;
+                                // &::after{
+                                //     content: '';
+                                //     width: 8px;
+                                //     height: 8px;
+                                //     border: solid $body-color;
+                                //     border-width: 1px 1px 0 0;
+                                //     position: absolute;
+                                //     top: 50%;
+                                //     right: 15px;
+                                //     transform: translateY(-50%) rotate(45deg);
+                                //     transition: $transition;
+                                // }
+                                // &:hover{
+                                //     &::after{
+                                //         border-color: $white-color;
+                                //     }
+                                // }
+                            }
+                            .submenuList{
+                                padding-left: 40px;
+                                padding-top: 15px;
+                                display: none;
+                                li {
+                                    margin-top: 0;
+                                    a{
+                                        padding: 7px 0 !important;
+                                        background-color: transparent !important;
+                                        &:hover , &.active{
+                                            color : $body-color;
+                                        }
+                                    }
+                                }
+                            }
+                            &.active{
+                                #submenuClick{
+                                    &::after{
+                                        border-color: $white-color;
+                                        transform: translateY(-50%) rotate(130deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                /*--- license ---*/
+                .license-sidebar{
+                    li {
+                        margin-top: 10px;
+                        > a{ 
+                            display: flex;
+                            align-items: center;
+                            column-gap: 15px;
+                            width: 100%;
+                            padding: 12px 15px;
+                            font-weight: 700;
+                            font-size: 14px;
+                            border-radius: 6px;
+                            transition: $transition;
+                            position: relative;
+                                &::after{
+                                    content: '';
+                                    width: 8px;
+                                    height: 8px;
+                                    border: solid $white-color;
+                                    border-width: 2px 2px 0 0;
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 15px;
+                                    transform: translateY(-50%) rotate(135deg);
+                                    transition: $transition;
+                                }
+                            .icon{
+                                svg{
+                                    transition: $transition;
+                                    fill: $body-color;
+                                }
+                            }
+                        }
+                        &.active{
+                            a{
+                                background-color: $primary-color-two;
+                                color: $white-color;
+                                .icon{
+                                    svg{
+                                        fill: $white-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .license-subdropdown{
+                        display: none;
+                    }
+                }
+                .sidebarLogin{
+                    width: 100%;
+                    padding: 14px 35px;
+                    margin-top: 20px;
+                    background-color: $bg-light-green;
+                    transition: $transition;
+                    p{
+                        color: $primary-color-one;
+                        font-size: 14px;
+                        line-height: 14px;
+                        font-weight: 500;
+                    }
+                    span{
+                        font-size: 14px;
+                        line-height: 12px;
+                        color: $body-color;
+                    }
+                }
+            }
+        }
+        .deshbordBody{
+            width: calc(100% - 280px);
+            padding-top: 65px;
+            transition: $transition;
+            nav{
+                background-color: $white-color;
+                box-shadow: 10px 2px 15px rgba(0, 0, 0, 0.08);
+                .breadcrumb{
+                    margin-bottom: 0;
+                    .breadcrumb-item{
+                        font-size: 14px;
+                        a{
+                            color: #111111;
+                               
+                        }
+                        &.active{
+                            color: $bg-black;
+                        }
+                    }
+                }
+            }
+            .bodyMain{
+                padding: 20px 25px;
+                    .gradient-strip-wrapper{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        row-gap: 15px;
+                        padding: 20px 30px;
+                        border-radius: 5px;
+                        background-color: #FFF1F1;
+                        border: 1px solid $red-color;
+                            .icon{
+                                display: flex;
+                                align-items: center;
+                                row-gap: 15px;
+                                gap: 20px;
+                                svg{
+                                    fill: $red-color;
+                                }
+                                p{
+                                    
+                                    font-weight: $font-weight1;
+                                }
+                            }
+                            .gradient-right{
+                                display: flex;
+                                align-items: center;
+                                gap: 20px;
+                                .white-btn{
+                                    color: $white-color;
+                                    background-color: #FB4949;
+                                    border-radius: 5px;
+                                    padding: 12px 20px;
+                                    font-weight: $font-weight1;
+                                    border: 1px solid #FB4949;
+                                        &:hover{
+                                            background-color: transparent;
+                                            color: #FB4949;
+                                        }
+                                }
+                            }
+                    &.gradient-strip-error-wrapper{
+                        border: 1px solid $border-error;
+                        background: $bg-error;
+                        .icon{
+                            svg{
+                                fill: $border-error;
+                            }
+                        }
+                        p{
+                            color: $neutral-color-one;
+                        }
+                        .gradient-right{
+                            .error-btn{
+                                color: $white-color;
+                                background-color: $red-color;
+                                border-radius: 5px;
+                                padding: 12px 20px;
+                                font-weight: $font-weight1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.deshbordmainFixed{
+        padding-top: 46.36px;
+        .deshbordHeader{
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+        .deshbordMaincontant{
+            .deshbordSidebar{
+                // height: 100%;
+                height: calc(100% - 14.36px);
+            }
+        }
+    }
+}
+
+.dashboard-head-wrapper{
+    background-color: $white-color;
+    .dashboard-left{
+        padding: 5px 0;
+        .timeText{
+            column-gap: 10px;
+        }
+    }
+    .dashboard-right{
+        position: relative;
+        padding: 12px 0px;
+        &::before{
+            content: '';
+            clip-path: none;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: $bg-dashboard;
+            width: 75%;
+            height: 100%;
+            clip-path: polygon(4% 1%, 100% 0, 100% 100%, 0 100%);
+        }
+        .right-menu{
+            li{
+                position: relative;
+                border-right: 1px solid #BFBFBF;
+                padding: 0 20px;
+                .social-dashboard{
+                    column-gap: 8px;
+                }
+                a{
+                    color: $white-color;
+                    padding: 8px 0px;
+                }
+            }
+            .filter-btn{
+                position: relative;
+                cursor: pointer;
+                    span{
+                        svg{
+                            fill: $white-color;
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                .filter-info{
+                    position: absolute;
+                    background-color: $bg-body;
+                    width: 235px;
+                    right: 0;
+                    z-index: 111;
+                    padding: 20px 0; 
+                    border-radius: 5px;
+                    display: none;
+                    top: 36px;
+                    box-shadow: 0px 0px 5px #cccc;
+                    .layout-buttons{
+                        ul{
+                            li{
+                                a{
+                                    color: $body-color !important;
+                                    padding: 10px 10px 10px 20px;
+                                    display: block;
+                                        
+                                }
+                                &:hover{
+                                    a{
+                                        background-color: $primary-color-one;
+                                        color: $white-color !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/*--- dashboard-footer ---*/
+.bottom-footer-wrap{
+    text-align: center;
+    background-color: $primary-color-one;
+    color: $white-color;
+    padding: 14px 10px;
+    margin-top: 200px;
+}
+ 
+@include for-1199{
+    .dashboard-head-wrapper {
+        .dashboard-right{
+            &::before{
+                width: 100%;
+            }
+        }
+    }
+    .deshbordMain {
+        .deshbordMaincontant {
+            .deshbordBody {
+                .bodyMain {
+                    .deshbordBox {
+                        .dashboard-content {
+                            .field-line{
+                                &::before{
+                                    display: none;
+                                }
+                            }
+                            .dashboard-field {
+                                ul {
+                                    li {
+                                        span{
+                                            width: 133px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include for-1024{
+    .deshbordMain {
+        .deshbordMaincontant {
+            .deshbordBody {
+                .bodyMain {
+                    .deshbordBox {
+                        .dashboard-content {
+                            .dashboard-field {
+                                ul {
+                                    li {
+                                        span{
+                                            width: 165px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .deshbordMain{
+        &.closed-sidebar{
+            .deshbordHeader{
+                .deshbordHeaderLogo{
+                    width: 80px;
+                    min-width: 80px;
+                    column-gap: 0;
+                    justify-content: center;
+                    .logo{
+                        text-indent: -9999999px;
+                    }
+                }
+                .deshbordHeader-content{
+                    width: calc(100% - 80px);
+                }
+            }
+            .deshbordMaincontant{
+                .deshbordSidebar{
+                    width: 80px;
+                    min-width: 80px;
+                    &:hover{
+                        width: 280px;
+                        min-width: 280px;
+                        .sidebarContent{
+                            .sidebarList{
+                                li{
+                                    a{  
+                                        width: 100%;
+                                        height: 100%;
+                                        min-height: 100%;
+                                        min-width: 100%;
+                                        padding: 7px 15px;
+                                        column-gap: 15px;
+                                        justify-content: flex-start;
+                                        text-indent: 0px;
+                                        .icon{
+                                            text-indent: 0;
+                                        }
+                                        .badge{
+                                            transform: translateX(0px);
+                                        }
+                                        &::after{
+                                            display: block;
+                                        }
+                                    }
+                                    &.submenuDropdown{
+                                        .submenuList{
+                                            &.open{
+                                                display: block !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .license-sidebar{
+                                li{
+                                    a{  
+                                        width: 100%;
+                                        height: 100%;
+                                        min-height: 100%;
+                                        min-width: 100%;
+                                        padding: 7px 15px;
+                                        column-gap: 15px;
+                                        justify-content: flex-start;
+                                        text-indent: 0px;
+                                        .icon{
+                                            text-indent: 0;
+                                        }
+                                        .badge{
+                                            transform: translateX(0px);
+                                        }
+                                        &::after{
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                            .sidebarLogin{
+                                transform: translateX(0px);
+                            }
+                        }
+                    }
+                    .sidebarContent{
+                        .sidebarList{
+                            li{
+                                a{  
+                                    width: 40px;
+                                    height: 40px;
+                                    min-height: 40px;
+                                    min-width: 40px;
+                                    padding: 7px 0;
+                                    column-gap: 0;
+                                    justify-content: center;
+                                    text-indent: -9999999px;
+                                    .icon{
+                                        text-indent: 0;
+                                    }
+                                    .badge{
+                                        transform: translateX(-1000px);
+                                    }
+                                    &::after{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                        .license-sidebar{
+                            li{
+                                a{  
+                                    width: 40px;
+                                    height: 40px;
+                                    min-height: 40px;
+                                    min-width: 40px;
+                                    padding: 7px 0;
+                                    column-gap: 0;
+                                    justify-content: center;
+                                    text-indent: -9999999px;
+                                    .icon{
+                                        text-indent: 0;
+                                    }
+                                    .badge{
+                                        transform: translateX(-1000px);
+                                    }
+                                    &::after{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                        .sidebarLogin{
+                            transform: translateX(-1000px);
+                        }
+                    }
+                }
+                .deshbordBody{
+                    width: calc(100% - 80px);
+                }
+            }
+        }
+    }
+}
+
+@include for-991{
+    .deshbordPage-header{
+        .container-fluid{
+            padding-right: var(--bs-gutter-x, 0.75rem);
+            padding-left: var(--bs-gutter-x, 0.75rem);
+        }
+        .top-header {
+            background-color: #5f9413;
+            .topHeader-right{
+                width: 100%;
+                padding-left: 0;
+                clip-path: none;
+                justify-content: center;
+            }
+        }
+    } 
+    .deshbordMain {
+        .deshbordHeader {
+            .deshbordHeaderLogo{
+                display: none;
+                .logo{
+                    display: none;
+                }
+            }
+            .deshbordHeader-content{
+                width: 100%;
+                padding: 12.5px 24px;
+                padding-right: var(--bs-gutter-x, 0.75rem);
+                padding-left: var(--bs-gutter-x, 0.75rem);
+                .headerContent-left{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    column-gap: 15px;
+                }
+                .logo{
+                    max-width: 200px;
+                }
+                .headerContent-right {
+                    .profile {
+                        .userProfile {
+                            .profileImg{
+                                display: flex;
+                                align-items: center;
+                                column-gap: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .deshbordMaincontant {
+            .deshbordBody {
+                .bodyMain {
+                    .deshbordBox {
+                        .food-wrap {
+                            ul {
+                                li{
+                                    p{
+                                        width: 245px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .deshbordSidebar{
+                transform: translateX(-100%);
+                padding-top: 70px;
+            }
+            .deshbordBody{
+                width: 100%;
+                padding-top: 88px;
+            }
+        }
+        &.closed-sidebar{
+            .deshbordMaincontant {
+                .deshbordSidebar{
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+}
+
+@include for-767{
+    /*--- license ---*/
+    .deshbordMain .deshbordMaincontant .deshbordBody .bodyMain .deshbordBox .food-wrap{
+        flex-wrap: wrap;
+        row-gap: 12px;
+        ul{
+            li:nth-child(2){
+                margin-top: 12px;
+            }
+        }
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .bodyMain .deshbordBox .food-btn-wrap ul{
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    /*--- ffp-profile ---*/
+    .deshbordMain .deshbordMaincontant .deshbordBody .bodyMain .deshbordBox .ffp-profile-wrapper .ffp-profile-content{
+        column-gap: 55px;
+        .profile-info ul li span{
+            width: 150px;
+        }
+        .profile-info2{
+            &::after{
+                left: -25px;
+            }
+        }
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .bodyMain .gradient-strip-wrapper{
+        flex-wrap: wrap;
+    }
+}
+@include for-575{
+    .deshbordMain .deshbordHeader .deshbordHeader-content .headerContent-left h5{
+        display: none;
+    }
+    .deshbordMain .deshbordHeader .deshbordHeader-content .headerContent-right{
+        column-gap: 10px;
+    }
+    .deshbordMain .deshbordHeader .deshbordHeader-content .logo {
+        max-width: 150px;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .bodyMain{
+        padding: 20px 15px;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .bodyMain .deshbordBox{
+        padding: 20px;
+    }
+}
+@include for-480{
+    header .top-header .topHeader-right .darkLight-font{
+        column-gap: 10px;
+    }
+    header .top-header .topHeader-right > div{
+        padding: 10px 7px;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .bodyMain .deshbordBox .filterRow .filterBox{
+        width: 100%;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .bodyMain .gradient-strip-wrapper .icon{
+        flex-wrap: wrap;
+    }
+}
+

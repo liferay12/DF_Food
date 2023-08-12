@@ -1,0 +1,9 @@
+apiDir: "../dgfood-headless-common-delivery-api/src/main/java"
+apiPackagePath: "bd.gov.dgfood.headless.common.delivery"
+application:
+    baseURI: "/dgfood-headless-common-delivery"
+    className: "DgfoodHeadlessCommonDeliveryApplication"
+    name: "DgfoodHeadlessCommonDelivery"
+author: "krishna"
+#clientDir: "../dgfood-headless-common-delivery-client/src/main/java"
+#testDir: "../dgfood-headless-common-delivery-test/src/testIntegration/java"

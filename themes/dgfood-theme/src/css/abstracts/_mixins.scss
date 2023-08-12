@@ -1,0 +1,123 @@
+
+
+
+@mixin linear-gradient {
+	background: linear-gradient(45.91deg, $gradient-color-one 0%, $gradient-color-two 101.63%);
+}
+
+@mixin linear-gradient-light {
+	background: linear-gradient(226.81deg, $gradient-color-three 1.56%, $gradient-color-four 98.58%);
+}
+
+
+/*------ responsive ----*/
+
+@mixin for-1700 {
+    @media (max-width: 1700px) {
+        @content;
+    }
+}
+@mixin for-1440 {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+@mixin for-1366 {
+    @media (max-width: 1366px) {
+        @content;
+    }
+}
+@mixin for-1199 {
+    @media (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin for-1024 {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin for-991 {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+@mixin for-767 {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+@mixin for-575 {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+@mixin for-500 {
+    @media (max-width: 500px) {
+        @content;
+    }
+}
+@mixin for-480 {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+@mixin for-380 {
+    @media (max-width: 380px) {
+        @content;
+    }
+}
+@mixin for-320 {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+@include for-991{
+    .section-space {
+        padding: 100px 0;
+    }    
+}
+
+@include for-767{
+    .section-space {
+        padding: 60px 0;
+    }
+}
+
+@mixin controlPanelCSS {
+    body.has-control-menu {
+        @content;
+    }
+}
+
+@mixin editModeCss {
+    body.has-edit-mode-menu {
+        @content;
+    }
+}
+
+@mixin ideviceCss {
+    body.imac,
+    body.iphone {
+        @content;
+    }
+}
+
+@mixin imacCss {
+    body.imac {
+        @content;
+    }
+}
+
+@mixin iphoneCss {
+    body.iphone {
+        @content;
+    }
+}
+
+@mixin safariCss {
+    body.safari {
+        @content;
+    }
+}

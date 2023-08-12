@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action  
+Mapping 7.4.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_7_4_0.dtd">
+
+<resource-action-mapping>
+	<model-resource>
+		<model-name>bd.gov.dgfood.license.management.system</model-name>
+		<portlet-ref>
+			<portlet-name>bd_gov_dgfood_foodgrain_license_web_FGLicensePortlet</portlet-name>
+		</portlet-ref>
+		<root>true</root>
+		<permissions>
+			<supports>
+				<action-key>NEW_FG_LICENSE_APPLICATION</action-key>
+				<action-key>NEW_FG_LICENSE_APPLICATION_DETAILS_AND_STATUS_TRACKING</action-key>
+				<action-key>DEALER_REGISTRATION</action-key>
+				<action-key>APPLY_FOR_MILLING_LICENSE</action-key>
+				<action-key>FG_LICENSE_APPLICATION_RENEWAL</action-key>
+				<action-key>DUPLICATE_FG_LICENSE_APPLICATION</action-key>
+				<action-key>VIEW_FG_LICENSE_APPLICATION_DETAILS</action-key>
+			</supports>
+			<guest-defaults>
+				<action-key>NEW_FG_LICENSE_APPLICATION</action-key>
+			</guest-defaults>
+			<guest-unsupported>
+				<action-key>NEW_FG_LICENSE_APPLICATION</action-key>
+				<action-key>NEW_FG_LICENSE_APPLICATION_DETAILS_AND_STATUS_TRACKING</action-key>
+				<action-key>DEALER_REGISTRATION</action-key>
+				<action-key>APPLY_FOR_MILLING_LICENSE</action-key>
+				<action-key>FG_LICENSE_APPLICATION_RENEWAL</action-key>
+				<action-key>DUPLICATE_FG_LICENSE_APPLICATION</action-key>
+				<action-key>VIEW_FG_LICENSE_APPLICATION_DETAILS</action-key>
+			</guest-unsupported>
+		</permissions>
+	</model-resource>
+	<model-resource>
+		<model-name>bd.gov.dgfood.license.management.system</model-name>
+		<portlet-ref>
+			<portlet-name>bd_gov_dgfood_foodgrain_license_web_FoodGrainLicenseListPortlet</portlet-name>
+		</portlet-ref>
+		<root>true</root>
+		<permissions>
+			<supports>
+				<action-key>NEW_FG_LICENCE_APPLICATION_LIST</action-key>
+				<action-key>DUPLICATE_FG_LICENCE_APPLICATION_LIST</action-key>
+				<action-key>FG_LICENSE_APPLICATION_RENEWAL_LIST</action-key>
+				<action-key>VIEW_FG_LICENSE_APPLICATION_DETAILS</action-key>
+			</supports>
+			<guest-unsupported>
+				<action-key>NEW_FG_LICENCE_APPLICATION_LIST</action-key>
+				<action-key>DUPLICATE_FG_LICENCE_APPLICATION_LIST</action-key>
+				<action-key>FG_LICENSE_APPLICATION_RENEWAL_LIST</action-key>
+				<action-key>VIEW_FG_LICENSE_APPLICATION_DETAILS</action-key>
+			</guest-unsupported>
+		</permissions>
+	</model-resource>
+</resource-action-mapping>
+

@@ -1,0 +1,4 @@
+Bundle-Name: dgfood-location-selector-web
+Bundle-SymbolicName: bd.gov.dgfood.location.selector.web
+Bundle-Version: 1.0.0
+Export-Package: bd.gov.dgfood.location.selector.web.constants

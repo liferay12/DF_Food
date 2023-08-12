@@ -1,0 +1,9 @@
+apiDir: "../dgfood-headless-grievance-api/src/main/java"
+apiPackagePath: "bd.gov.dgfood.headless.grievance"
+application:
+    baseURI: "/dgfood-headless-grievance"
+    className: "DgfoodHeadlessGrievanceApplication"
+    name: "DgfoodHeadlessGrievance"
+author: "liferay"
+clientDir: "../dgfood-headless-grievance-client/src/main/java"
+testDir: "../dgfood-headless-grievance-test/src/testIntegration/java"

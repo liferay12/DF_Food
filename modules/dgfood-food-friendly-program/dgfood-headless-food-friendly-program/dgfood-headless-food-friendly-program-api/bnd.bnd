@@ -1,0 +1,6 @@
+Bundle-Name: dgfood-headless-food-friendly-program-api
+Bundle-SymbolicName: bd.gov.dgfood.headless.food.friendly.program.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	bd.gov.dgfood.headless.food.friendly.program.dto.v1_0,\
+	bd.gov.dgfood.headless.food.friendly.program.resource.v1_0

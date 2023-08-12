@@ -1,0 +1,9 @@
+apiDir: "../dgfood-headless-user-authentication-api/src/main/java"
+apiPackagePath: "bd.gov.dgfood.headless.user.authentication"
+application:
+    baseURI: "/dgfood-headless-user-authentication"
+    className: "DgfoodHeadlessUserAuthenticationApplication"
+    name: "DgfoodHeadlessUserAuthentication"
+author: "AshishV"
+clientDir: "../dgfood-headless-user-authentication-client/src/main/java"
+testDir: "../dgfood-headless-user-authentication-test/src/testIntegration/java"

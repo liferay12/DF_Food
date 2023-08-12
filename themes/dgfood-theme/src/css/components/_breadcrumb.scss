@@ -1,0 +1,47 @@
+.portlet-layout {
+	.portlet-header {
+		margin-bottom: 0;
+	}
+}
+.breadcrumb {
+	background: transparent;
+	padding: 0;
+	box-shadow: inherit;
+}
+.breadcrumb-item {
+	& + .breadcrumb-item {
+		padding-left: 0;
+		&::before {
+			background: inherit;
+			position: relative;
+			padding-right: 9px;
+			margin: 0;
+			height: auto;
+			width: auto;
+			float: left;
+			padding-right: 0.5rem;
+			color: #6c757d;
+			content: var(--bs-breadcrumb-divider, "/");
+		}
+	}
+}
+.inner-page-title {
+	nav {
+		.breadcrumb {
+			.breadcrumb-item {
+				a {
+					color: var(--primary-color-one);
+					svg {
+						position: relative;
+						top: -3px;
+					}
+				}
+				&:last-child {
+					a {
+						color: #000000;
+					}
+				}
+			}
+		}
+	}
+}

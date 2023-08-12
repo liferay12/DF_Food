@@ -1,0 +1,4 @@
+Bundle-Name: dgfood-rest-tld
+Bundle-SymbolicName: bd.gov.dgfood.rest.tld
+Bundle-Version: 1.0.0
+Liferay-Configuration-Path: /configuration

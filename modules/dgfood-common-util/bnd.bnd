@@ -1,0 +1,9 @@
+Bundle-Name: dgfood-common-util
+Bundle-SymbolicName: bd.gov.dgfood.common.util
+Bundle-Version: 1.0.0
+Export-Package: \
+	bd.gov.dgfood.common.util.constants,\
+	bd.gov.dgfood.common.util,\
+	bd.gov.dgfood.common.util.validator,\
+	bd.gov.dgfood.common.notification.handler,\
+	bd.gov.dgfood.common.util.language

@@ -1,0 +1,3 @@
+Bundle-Name: dgfood-headless-user-authentication-impl
+Bundle-SymbolicName: bd.gov.dgfood.headless.user.authentication.impl
+Bundle-Version: 1.0.0

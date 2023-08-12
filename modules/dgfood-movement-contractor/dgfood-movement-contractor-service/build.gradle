@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:dgfood-movement-contractor:dgfood-movement-contractor-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../dgfood-movement-contractor-api/src/main/java"
+}
+
+group = "bd.gov.dgfood.movement.contractor"

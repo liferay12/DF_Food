@@ -1,0 +1,6 @@
+Bundle-Name: dgfood-headless-license-management-system-api
+Bundle-SymbolicName: dgfood.headless.license.management.system.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	dgfood.headless.license.management.system.dto.v1_0,\
+	dgfood.headless.license.management.system.resource.v1_0

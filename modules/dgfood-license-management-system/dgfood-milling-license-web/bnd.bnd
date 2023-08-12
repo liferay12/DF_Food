@@ -1,0 +1,4 @@
+Bundle-Name: dgfood-milling-license-web
+Bundle-SymbolicName: bd.gov.dgfood.milling.license
+Bundle-Version: 1.0.0
+Export-Package: bd.gov.dgfood.milling.license.constants

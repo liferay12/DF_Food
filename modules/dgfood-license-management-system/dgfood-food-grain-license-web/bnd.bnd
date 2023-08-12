@@ -1,0 +1,4 @@
+Bundle-Name: dgfood-food-grain-license-web
+Bundle-SymbolicName: bd.gov.dgfood.foodgrain.license.web
+Bundle-Version: 1.0.0
+Export-Package: bd.gov.dgfood.foodgrain.license.constants

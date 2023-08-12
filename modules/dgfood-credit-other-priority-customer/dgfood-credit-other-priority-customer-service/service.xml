@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+<service-builder dependency-injector="ds" package-path="bd.gov.dgfood.credit.other.priority.customer">
+	<namespace>DGFOOD</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="SalesCustomer" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="salesCustomerId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="createdBy" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="userId" type="long" />
+        <column name="userType" type="String" />
+		<column name="mobileNumber" type="String" />
+		<column name="emailAddress" type="String" />
+		<column name="title" type="String" />
+		<column name="contactPersonName" type="String" />
+		<column name="contactPersonDesignation" type="String" />
+		<column name="officeName" type="String" />
+		<column name="organizationName" type="String" />
+		<column name="organizationType" type="String" />
+		<column name="gender" type="int" />
+		<column name="salesCustomerCode" type="long" />
+		
+		<column name="version" type="double" />
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+        <column name="statusDate" type="Date" />
+
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="modifiedDate" />
+		</order>
+
+		<!-- Finder methods -->
+		 <finder return-type="SalesCustomer" name="UserId">
+			<finder-column name="userId"></finder-column>
+	    </finder>
+
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+		<entity local-service="true" name="SalesCustomerVersion" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="salesCustomerVersionId" primary="true" type="long" />
+		
+		<!-- FK fields -->
+		<column name="salesCustomerId" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />	
+		<column name="createdBy" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="userId" type="long" />
+        <column name="userType" type="String" />
+		<column name="mobileNumber" type="String" />
+		<column name="emailAddress" type="String" />
+		<column name="title" type="String" />
+		<column name="contactPersonName" type="String" />
+		<column name="contactPersonDesignation" type="String" />
+		<column name="officeName" type="String" />
+		<column name="organizationName" type="String" />
+		<column name="organizationType" type="String" />
+		<column name="gender" type="int" />
+		
+		<column name="version" type="double" />
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+        <column name="statusDate" type="Date" />
+
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="modifiedDate" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder return-type="SalesCustomerVersion" name="SCI_V">
+			<finder-column name="salesCustomerId"></finder-column>
+			<finder-column name="version"></finder-column>
+	    </finder>
+	   
+	    
+	    <finder return-type="Collection" name="SalesCustomerId">
+			<finder-column name="salesCustomerId"></finder-column>
+	    </finder>
+
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+		<entity local-service="true" name="SalesCustomerAllocation" remote-service="true"
+		uuid="true">
+		
+	     <!-- PK fields -->
+		<column name="salesCustomerAllocationId" primary="true" type="long" />
+		
+		<!-- Audit fields -->
+		<column name="salesCustomerCode" type="long" />
+		<column name="salesCustomerName" type="String" />
+		
+		<!-- Other fields -->
+		<column name="allocationNumber" type="long" />
+		<column name="salesOrganization" type="String" />
+		<column name="distributionChannel" type="String" />
+		<column name="year" type="int" />
+		<column name="district" type="String" />
+		<column name="subDistrict" type="String" />
+		<column name="govOrderNumber" type="String" />
+		<column name="commodity" type="String" />
+		<column name="yearlyQty" type="double" />
+		<column name="yearlyQtyUnit" type="String" />
+		<column name="monthlyQty" type="double" />
+		<column name="monthlyQtyUnit" type="String" />
+		
+		<column name="companyId" type="long" />
+		
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+	</entity>
+	
+</service-builder>

@@ -1,0 +1,1126 @@
+.inner-page-title{
+    width: 100%;
+    background-color: $white-color;
+    box-shadow: 10px 2px 15px rgba(0, 0, 0, 0.08);
+    padding: 14px 0px;
+        p{
+            font-weight: $font-weight1;
+        }
+        nav{
+            background-color: $white-color;
+            .breadcrumb{
+                margin-bottom: 0;
+                .breadcrumb-item{
+                    font-size: 14px;
+                    font-weight: $font-weight1;
+                    a{
+                        color: $primary-color-one;
+                        font-weight: $font-weight1;
+                    }
+                    &.active{
+                        color: $bg-black;
+                    }
+                }
+            }
+        }
+}
+
+.dg-food-grain-main-wrapper{
+    width: 100%;
+    display: flex;
+    background-image: url('../images/bg-license.png');  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+        .dg-food-grain-inner-page-wrapper{
+            width: 100%;
+            display: flex;
+            padding: 90px 0px;
+                .food-grain-image{
+                    width: inherit;
+                }
+                .food-grain-text{
+                    width: inherit;
+                        h3{
+                            margin-bottom: 30px;
+                        }
+                        .food-grain-service-wrapper{
+                            width: 100%;
+                            display: flex;
+                            padding: 22px;
+                            background: $white-color;
+                            border-radius: 5px;
+                            justify-content: space-between;
+                            align-items: center;
+                            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
+                            margin-bottom: 25px;
+                            flex-wrap: wrap;
+                            row-gap: 10px;
+                            .food-grain-icon{
+                                display: flex;
+                                align-items: center;
+                              
+                               
+                                    span{
+                                        display: inline-block;
+                                        width: 70px;
+                                        height: 70px;
+                                        line-height: 60px;
+                                        text-align: center;
+                                        border: 1px solid $primary-color-one;
+                                        border-radius: 50%;
+                                        background-color: $neutral-color-light;
+                                    }
+                                    p{
+                                        font-weight: $font-weight1;
+                                        padding-left: 20px;
+                                    }
+                            }
+                            .food-grain-btn{
+                                
+                            }
+                        }
+                }
+                .food-grain-app-guidline-wrappper{
+                    width: 100%;
+                    padding: 40px;
+                    border-radius: 5px;
+                    background: $white-color;
+                    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
+                        h3{
+                            margin-bottom: 20px;
+                            color: $primary-color-one;
+                        }
+                        .guidline-content{
+                            border: 1px solid $primary-color-one;
+                            border-radius: 5px;
+                            padding: 20px;
+                            height: 265px;
+                            overflow: auto;
+                            p{
+                                padding-bottom: 20px;
+                            }
+                        }
+                        .guidline-footer{
+                            margin-top: 30px;
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+                                p{
+                                    color: $gray-color;
+                                        a{
+                                            color: $primary-color-one;
+                                            font-weight: $font-weight1;
+                                        }
+                                }
+                        }
+                }
+        }  
+       
+}
+.food-grain-footer-wrapper{
+    width: 100%;
+    display: flex;
+    background-color: $primary-color-one;
+    justify-content: center;
+    padding: 12px 0px;
+        p{
+            color: $white-color;
+                span{
+                    font-weight: $font-weight1;
+                }
+        }
+}
+
+.food-grain-license-app-form-inner-wrapper{
+    width: 100%;
+    position: relative;
+        .inner-banner-fixed-wrapper{
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: -1;   
+        }
+       
+        .license-form-header-wrapper{
+            width: 100%;
+            background-color: $white-color;
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 24px;
+                .license-top-header{
+                    width: 100%;
+                    background-color: $primary-color-one;
+                    padding: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                        .nid-no{
+                            p{
+                                color: $white-color;
+                                font-weight: $font-weight1;
+                                    span{
+                                        display: inline-block;
+                                        padding-left: 16px;
+                                    }
+                            }
+                        }
+                        
+                }
+                .license-inner-form{
+                    width: 100%;
+                    padding: 30px 30px 30px;
+                        h4{
+                            padding-bottom: 20px;
+                        }
+                        .heading-strip{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            border: 1px solid $primary-color-one;
+                            background-color: $neutral-color-light;  
+                            padding: 20px;
+                            border-radius: 6px;
+                                .pending{
+                                    h4{
+                                        padding-bottom: 0;
+                                        color: $primary-color-two;
+                                    }
+                                    &.font-color{
+                                        h4{
+                                            color: $primary-color-one;
+                                                span{
+                                                    display: inline-block;
+                                                    padding-right: 12px;
+                                                }
+                                        }
+                                    }
+                                } 
+                                .applied{
+                                    h4{
+                                        padding-bottom: 0;
+                                    }
+                                } 
+                                &.rejected-header{
+                                    background-color: #FFF1F1;
+                                    align-items: baseline;
+                                    border: 1px solid $red-color;
+                                    .pending{
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 22px;
+                                        h4{
+                                            color: $red-color;
+                                                span{
+                                                    display: inline-block;
+                                                    padding-right: 25px;
+                                                }
+                                                small{
+                                                    font-weight: 400;
+                                                    color: $body-color;
+                                                    display: inline-block;
+                                                    padding-left: 25px;
+                                                }
+                                        }
+                                    }
+                                }
+                        }
+                        
+                        &.payment-pending-form{
+                            .payment-form-title{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                h4{
+                                    span{
+                                        color: $primary-color-one;
+                                    }
+                                }
+                            }
+                            .license-pay-from-wrapper{
+                                margin-top: 30px;
+                                    form{
+                                        .form-group{
+                                           
+                                            
+                                        }
+                                        .form-btn{
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 24px;
+                                            margin-top: 30px;
+                                            padding-bottom: 20px;
+                                        }
+                                    }
+                            }
+                        }
+                        .step-form-wrapper{
+                            width: 100%;
+                                form{
+                                    .dashboard-profile-box{
+                                        display: flex;
+                                        justify-content: space-between;
+                                            .dahsboard-profile-form{
+                                                width: 80%;
+                                                    .flag-wrap{
+                                                        .flag-edit{
+                                                            position: absolute;
+                                                            top: 40px;
+                                                            right: 7px;
+                                                                a{
+                                                                    background-color: $primary-color-one;
+                                                                    color: $white-color;
+                                                                    display: inline-block;
+                                                                    padding: 7px 20px;
+                                                                    border-radius: 5px;
+                                                                }
+                                                        }
+                                                    }
+                                                    .radio-input{
+                                                        ul{
+                                                            .default-radio{
+                                                                background-color: $neutral-color-four;
+                                                                border: 1px solid $neutral-color-two;
+                                                                    label{
+                                                                        &:before{
+                                                                            border: 1px solid $neutral-color-two;
+                                                                        }
+                                                                    }
+                                                            }
+                                                        }
+                                                    }
+                                            }
+                                    }
+                                    .form-group{
+                                        margin-bottom: 20px;
+                                            .input-box{
+                                                position: relative;
+                                                display: flex;
+                                                    input{
+                                                        border: 1px solid $primary-color-one;
+                                                        height: 50px;
+                                                        position: relative;
+                                                        background-color: transparent;
+                                                    }
+                                                    .date-icon{
+                                                        position: absolute;
+                                                        right: 25px;
+                                                        bottom: 12px;
+                                                    }
+                                                    &.date-disable{
+                                                        input{
+                                                            background-color: $neutral-color-four;
+                                                            border: 1px solid $neutral-color-two;
+                                                            position: relative;
+                                                            z-index: 1;
+                                                        }
+                                                        .date-icon{
+                                                            z-index: 99;
+                                                        }
+                                                    }
+                                            }
+                                    }
+                                    .form-btn{
+                                        gap: 20px;
+                                        display: flex;
+                                        .extra-secondary-btn{
+                                            min-width: 123px;
+                                        }
+                                        p{
+                                            color: $red-color;
+                                            padding-top: 14px;
+                                            span{
+                                                font-weight: $font-weight1;
+                                            }
+                                        }
+                                    }
+                                    .output{
+                                        .colors{
+                                            display: none;
+                                                .select-distric{
+                                                    width: 100%;
+                                                    display: flex;
+                                                    gap: 20px;
+                                                        .form-group{
+                                                            width: 100%;
+                                                        }
+                                                }
+                                        }
+                                        .zillaname{
+                                            display: none;
+                                        }
+                                    }
+                                }
+                        }
+                        .noti-top-header{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            font-weight: $font-weight1;
+                            margin-bottom: 20px;
+                            padding-left: 20px;
+                                label{
+                                    display: flex;
+                                    gap: 12px;
+                                    input{
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                                }
+                                a{
+                                    &:hover{
+                                        color: $primary-color-one;
+                                    }
+                                }
+                        }
+                        .select-panel-box{
+                            display: flex;
+                            gap: 12px;
+                            background-color: $neutral-color-light;
+                            border-radius: 5px;
+                            border: 1px solid $primary-color-one;
+                            padding: 20px;
+                            margin-bottom: 20px;
+                                .select-text{
+                                    span{
+                                        font-weight: $font-weight1;
+                                    }
+                                    p{
+                                        font-size: 14px;
+                                    }
+                                    a{
+                                        color: $primary-color-one;
+                                    }
+                                }
+                                .select-box{
+                                    label{
+                                        input{
+                                            width: 20px;
+                                            height: 20px;
+                                        }
+                                    }
+                                }
+                                &.disable-check-strip{
+                                    border-color: $neutral-color-two;
+                                    background-color: $neutral-color-four;
+                                }
+                        }
+                }
+                
+                .basic-info-main-wrapper{
+                    border: 1px solid $primary-color-one;
+                    border-radius: 6px;
+                    margin-top: 12px;
+                    p{
+                        color: $primary-color-one;
+                        font-weight: $font-weight1;
+                        padding: 15px 20px;
+                        width: 100%;
+                        border-bottom: 1px solid $neutral-color-three;
+                    }
+                    .basic-info-form-wrapper{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                            ul{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                    li{
+                                        display: flex;
+                                        border-bottom: 1px solid #ccc;
+                                        padding: 12px 20px;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        height: 49px;
+                                        p{
+                                            padding: 0;
+                                            font-weight: 400;
+                                            width: auto;
+                                            color: $neutral-color-one;
+                                            border-bottom: 0;
+                                            width: 45%;
+                                        }
+                                        span{
+                                            font-weight: $font-weight1;
+                                            width: 55%;
+                                        }
+                                        &.single-add{
+                                            p{
+                                                width: 23%;
+                                            }
+                                            span{
+                                                width: 80%;
+                                            }
+                                        }
+                                        &:last-child{
+                                            border-bottom: 0;
+                                        }
+                                    }
+                            }
+                            ul + ul{
+                                border-left: 1px solid #ccc;
+                            }
+                            .form-image{
+                                padding: 8px 20px 20px;
+                                border-left: 1px solid #ccc;
+                                    p{
+                                        color: $body-color;
+                                        padding: 0;
+                                        font-weight: 400;
+                                        padding-bottom: 6px;
+                                    }
+                            }
+                            // form{
+                            //     .form-group{
+                            //         .input-box{
+                            //             display: flex;
+                            //             align-items: center;
+                            //             justify-content: space-between;
+                            //             height: 49px;
+                            //             padding: 12px 20px;
+                            //             border-bottom: 1px solid #ccc;
+                            //         }
+                            //     }
+                            // }
+                            .document-file{
+                                p{
+                                    border: 0;
+                                    color: #4767BC;
+                                    font-weight: 400;
+                                        span{
+                                            display: inline-block;
+                                            padding-right: 10px;
+                                        }
+                                }
+                            }
+                            
+                    }
+                    &.track-issued-title{
+                        margin-top: 0;
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                        .basic-info-form-wrapper{
+                            ul{
+                                li{
+                                    border-bottom: 0;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                .custom-accordian{
+                    width: 100%;
+                        .accordion{
+                            .accordion-item{
+                                .accordion-header{
+                                        .accordion-button{
+                                            background-color: $primary-color-one;
+                                            color: $white-color;
+                                            font-weight: $font-weight1;
+                                            position: relative;
+                                                &:before{
+                                                   display: none;
+                                                }
+                                                &:after{
+                                                    display: none;
+                                                }
+                                        }
+                                   
+                                }
+                                .accordion-collapse{
+                                    .accordion-body{
+                                        padding-bottom: 30px;
+                                        .step-form-wrapper{
+                                            width: 100%;
+                                                form{
+                                                    .form-group{
+                                                        margin-bottom: 20px;
+                                                           
+                                                         
+                                                            .disable{
+                                                                background-color: $neutral-color-light;
+                                                            }
+                                                            .input-box{
+                                                                position: relative;
+                                                                display: flex;
+                                                                    input{
+                                                                        border: 1px solid $primary-color-one;
+                                                                        height: 50px;
+                                                                        position: relative;
+                                                                        background-color: transparent;
+                                                                        z-index: 99;
+                                                                    }
+                                                                    .date-icon{
+                                                                        position: absolute;
+                                                                        right: 30px;
+                                                                        top: 10px;
+                                                                    }
+                                                            }
+                                                    }
+                                                    .form-btn{
+                                                        .extra-secondary-btn{
+                                                            min-width: 123px;
+                                                        }
+                                                        p{
+                                                            color: $primary-color-one;
+                                                            padding-top: 14px;
+                                                            span{
+                                                                font-weight: $font-weight1;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                        }
+                                        .license-top-header{
+                                            @include linear-gradient-light;
+                                            border-radius: 5px;
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                }
+                .dg-profile-request-wrapper{
+                    padding: 24px;
+                    h4{
+                        color: $primary-color-one;
+                    }
+                    .compare-info-wrapper{
+                        width: 100%;
+                        display: flex;
+                        margin-top: 20px;
+                        border: 1px solid $border-gray;
+                            .previous-box{
+                                width: 50%;
+                                border-right: 1px solid $border-gray;
+                                    h5{
+                                        background-color: $primary-color-one;
+                                        color: $white-color;
+                                        font-size: 16px;
+                                        padding: 12px;
+                                    }
+                                    form{
+                                        padding: 20px 30px;
+                                        
+                                            .form-group{
+                                                margin-bottom: 20px;
+                                                textarea{
+                                                    min-height: 110px;
+                                                }
+                                            }
+                                    }
+                                 &.update-box{
+                                    border-right: 0;
+                                    form{
+                                        
+                                        input{
+                                            background-color: $neutral-color-light;
+                                        }
+                                        textarea{
+                                            background-color: $neutral-color-light;
+                                        }
+                                    }
+                                    
+                                 }   
+                            }
+                    }
+                }
+        }
+        .license-reply-main-wraper{
+            width: 100%;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid $primary-color-two;
+            background-color: $bg-resolved;
+                .top-header-reply{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-bottom: 14px;
+                    border-bottom: 1px solid #DFDFDF;
+                    margin-bottom: 22px;
+                     
+                        p{
+                            color: $bg-black;
+                                
+                                span{
+                                    display: inline-block;
+                                    font-weight: $font-weight1;
+                                    padding-left: 10px;
+
+                                }
+                        }
+                }
+                
+        }
+        &.bg-form-img{
+            background-image: url(../images/bg-license1.png);
+            padding: 40px 0px;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+}
+
+// ---------- track grain food css--------------------
+
+.dg-food-grain-track-main-wrapper{
+    width: 100%;
+    padding: 60px 0px;
+        .dg-food-grain-inner-page-wrapper{
+            display: flex;
+            width: 100%;
+            gap: 50px;
+            align-items: center;
+            background-color: $neutral-color-light; 
+            padding: 40px 24px;  
+            border: 1px solid $primary-color-one;
+            border-radius: 5px; 
+                .track-food-grain-image{
+                    width: 50%;
+                    text-align: center;
+                    
+                    
+                        h2{
+                            padding-top: 30px;
+                        }
+                        .track-grains-img{
+                            padding-top: 100px;
+                                img{
+                                    width: 100%;
+                                }
+                        }
+                }
+                .track-food-grain-form{
+                    width: 50%;
+                    
+                    .tab-content{
+                        
+                        .tab-pane-wrapper{
+                            form{
+                                .form-group{
+                                    margin-bottom: 20px;
+                                      
+                                        .input-box{
+                                            display: flex;
+                                            position: relative;
+                                                input{
+                                                    border: 1px solid $primary-color-one;
+                                                    height: 50px;
+                                                    background-color: transparent;
+                                                    position: relative;
+                                                    z-index: 99;
+                                                        &:focus{
+                                                            box-shadow: none;
+                                                        }
+                                                }
+                                                span{
+                                                    position: absolute;
+                                                    right: 25px;
+                                                    bottom: 12px;
+                                                }
+                                        }
+                                }
+                                .form-btn{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 24px;
+                                    margin-top: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+}
+
+// =========================LOGIN PAGE CSS=========================
+
+.dg-food-login-main-wrapper{
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    padding: 50px 0px;
+    position: relative;
+    background-image: url('../images/login.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+        .login-logo{
+            width: 100%;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        .login-form-wrapper{
+            width: 100%;
+            max-width: 570px;
+            margin: auto;
+            margin-bottom: 50px;
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            background-color: $white-color;
+            padding: 65px 40px;
+            position: relative;
+            z-index: 1;
+                h2{
+                    color: $primary-color-one;
+                    text-align: center;
+                    padding-bottom: 20px;
+                }
+                form{
+                    .forgot-pass{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-bottom: 20px;
+                            .form-check{
+                                padding: 0;
+                                    label{
+                                        font-weight: 400;
+                                    }
+                            }
+                            .check-box-wrapper{
+                                a{
+                                    color: $primary-color-one;
+                                    font-weight: $font-weight1;
+                                }
+                            }
+                    }
+                    .form-btn{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        row-gap: 20px;
+                            .extra-secondary-bg-btn{
+                                width: 100%;
+                                transition: $transition
+                            }
+                            .back-btn{
+                                font-weight: $font-weight1;
+                                color: $neutral-color-two;
+                                    &:hover{
+                                        color: $primary-color-one;
+                                    }
+                            }
+                    }
+                }
+                .frame-bg-wrapper1{
+                    padding-top: 20px;
+                }
+        }
+}
+
+.dg-food-dash-login-main-wrapper{
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+        .login-img{
+            width: 50%;
+            background-image: url(../images/login-img.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            padding: 75px 75px;
+            position: relative;
+                .logo{
+
+                }
+                h2{
+                    color: #4C9800;
+                    font-size: 52px;
+                    max-width: 300px;
+                    padding-top: 20px;
+                }
+        }
+        .login-form-box{
+            width: 50%;
+            background-color: #EAFFF5;
+            padding: 100px 0px;
+                .login-form-wrapper{
+                    // display: flex;
+                    // align-items: center;
+                    max-width: 660px;
+                    margin: auto;
+                    height: 100%;
+                        h3{
+                            width: 100%;
+                            display: block;
+                        }
+                        form{
+                            margin-top: 50px;
+                            .form-group{
+                                margin-bottom: 20px;
+                            }
+                            .forgot-pass{
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding-bottom: 20px;
+                                    .form-check{
+                                        padding: 0;
+                                            label{
+                                                font-weight: 400;
+                                            }
+                                    }
+                                    .check-box-wrapper{
+                                        a{
+                                            color: $primary-color-one;
+                                            font-weight: $font-weight1;
+                                        }
+                                    }
+                            }
+                            .captcha{
+                                padding: 0;
+                                border: 0;
+                                    label{
+                                        padding: 5px 0px;
+                                    }
+                            }
+                        }
+                }
+                .frame-bg-wrapper1{
+                    padding-top: 50px;
+                }
+        }
+}
+
+
+
+
+
+// =========================================== Responsive ===================================
+
+@media (max-width: 1366px) {
+    .step-bar-main-wrapper ul{
+        grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    }
+}
+@media (max-width: 1280px) {
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .basic-info-main-wrapper .basic-info-form-wrapper ul li p{
+        width: inherit;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .basic-info-main-wrapper .basic-info-form-wrapper ul li span{
+        width: inherit;
+    }
+}
+@media (max-width: 1199px) {
+    .dg-food-grain-main-wrapper .dg-food-grain-inner-page-wrapper .food-grain-text .food-grain-service-wrapper .food-grain-icon p {
+        padding-left: 20px;
+        max-width: 236px;
+    }
+    .step-bar-main-wrapper ul {
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    }
+}
+@media (max-width: 1124px) {
+    .dg-food-grain-main-wrapper .dg-food-grain-inner-page-wrapper{
+        gap: 20px;
+    }
+    .dg-food-grain-main-wrapper .dg-food-grain-inner-page-wrapper .food-grain-text .food-grain-service-wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 16px;
+    }
+    .dg-food-grain-main-wrapper .dg-food-grain-inner-page-wrapper .food-grain-text .food-grain-service-wrapper .food-grain-icon p{
+        max-width: 75%;
+    }
+   
+}
+@media (max-width: 991px) {
+    .dg-food-grain-main-wrapper .dg-food-grain-inner-page-wrapper {
+        gap: 20px;
+        flex-direction: column;
+    }
+    .dg-food-grain-main-wrapper .dg-food-grain-inner-page-wrapper .food-grain-image {
+        width: 100%;
+    }
+    .dg-food-grain-main-wrapper .dg-food-grain-inner-page-wrapper .food-grain-text {
+        width: 100%;
+    }
+    .dg-food-grain-main-wrapper .dg-food-grain-inner-page-wrapper .food-grain-text .food-grain-service-wrapper {
+        flex-direction: inherit;
+        align-items: inherit;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .basic-info-main-wrapper .basic-info-form-wrapper{
+        flex-direction: column;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .basic-info-main-wrapper .basic-info-form-wrapper ul li p{
+        font-size: 14px;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .basic-info-main-wrapper .basic-info-form-wrapper ul li span {
+        width: 55%;
+        font-size: 14px;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .basic-info-main-wrapper .basic-info-form-wrapper .form-image{
+        border: 0;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .basic-info-main-wrapper .basic-info-form-wrapper ul li{
+        height: auto;
+    }
+    .step-bar-main-wrapper ul {
+        grid-template-columns: repeat(auto-fill, minmax(162px, 1fr));
+    }
+    .form-name-header .form-name-text h3{
+        font-size: 18px;
+    }
+    .form-name-header .form-name-text p{
+        font-size: 14px;
+    }
+    .form-name-header .form-name-tag-line p{
+        font-size: 14px;
+    }
+    .dg-inner-page-main-wrapper .dg-search-page-main-wrapper .img-text{
+        flex-direction: column;
+    }
+    .dg-inner-page-main-wrapper .dg-search-page-main-wrapper .img-text .service-img, .dg-inner-page-main-wrapper .dg-search-page-main-wrapper .img-text .service-text{
+        width: 100%;
+    }
+    .dg-inner-page-main-wrapper .dg-search-page-main-wrapper .noti-web-wrapper h5{
+        padding: 0px 20px;
+    }
+}
+@media (max-width: 850px) {
+    .step-bar-main-wrapper ul {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+}
+@media (max-width: 767px) {
+    .dg-food-grain-main-wrapper .dg-food-grain-inner-page-wrapper .food-grain-image img {
+        width: 100%;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .license-inner-form h4 {
+        font-size: 18px;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .license-top-header .nid-no p {
+        font-size: 12px;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .custom-accordian .accordion .accordion-item .accordion-header .accordion-button{
+        font-size: 14px;
+    }
+    .form-name-header .form-name-text .form-logo {
+        position: inherit;
+        padding-top: 16px;
+    }
+    .step-bar-main-wrapper ul {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .dashboard-header .filter-wrapper .food-grain-search-filter-swrapper .d-flex .date-input-field.acl-input-width{
+        width: 100% !important;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .dashboard-header .filter-wrapper .food-grain-search-filter-swrapper .d-flex .input-select.acl-input-width{
+        width: 100% !important;
+    }
+    .dg-inner-page-main-wrapper .blog-single-main-wrapper .blog-text h2 {
+        font-size: 22px;
+    }
+    .dg-inner-page-main-wrapper .blog-side-panel-wrapper {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 724px) {
+    .step-bar-main-wrapper ul{
+        row-gap: 20px;
+    }
+    .step-bar-main-wrapper ul {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    .dg-inner-page-main-wrapper .pegination-wrapper ul {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 640px) {
+    .step-bar-main-wrapper ul li .step-name p{
+        display: none;
+    }
+    .step-bar-main-wrapper ul li .step-icon span{
+        width: 58px;
+        height: 58px;
+        line-height: 58px;
+    }
+    .step-bar-main-wrapper ul li .step-icon span svg {
+        width: 22px;
+        height: 22px;
+    }
+    .step-bar-main-wrapper ul {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .dg-food-grain-main-wrapper .dg-food-grain-inner-page-wrapper .food-grain-app-guidline-wrappper .guidline-footer{
+        flex-direction: column;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .license-inner-form .form-name-header .form-name-text p{
+        font-size: 14px;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .license-inner-form .form-name-header .form-name-tag-line p{
+        font-size: 14px;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .license-inner-form .form-name-header .form-name-text h3{
+        font-size: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .food-grain-footer-wrapper{
+        padding: 12px;
+    }
+    .dg-food-grain-main-wrapper .dg-food-grain-inner-page-wrapper .food-grain-text .food-grain-service-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .dg-food-grain-main-wrapper .dg-food-grain-inner-page-wrapper .food-grain-text .food-grain-service-wrapper .food-grain-icon{
+        flex-direction: column;
+        width: 100%;
+    }
+    .dg-food-grain-main-wrapper .dg-food-grain-inner-page-wrapper .food-grain-text .food-grain-service-wrapper .food-grain-icon p {
+        max-width: 100%;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .basic-info-main-wrapper .basic-info-form-wrapper ul li {
+       
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .basic-info-main-wrapper .basic-info-form-wrapper ul li span{
+        width: 100%;
+    }
+    .step-bar-main-wrapper ul{
+        display: flex;
+    }
+    .dg-inner-page-main-wrapper .blog-side-panel-wrapper .blog-side-box .post-strip .post-text a{
+        font-size: 18px;
+    }
+}
+@media (max-width: 450px) {
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .license-inner-form .heading-strip{
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 12px;
+    }
+}
+@media (max-width: 375px) {
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .license-top-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .step-bar-main-wrapper ul li .step-icon span {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+}
+@media (max-width: 360px) {
+    .dg-inner-page-main-wrapper .blog-side-panel-wrapper .blog-side-box .post-strip{
+        flex-direction: column;
+    }
+}

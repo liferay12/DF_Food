@@ -1,0 +1,156 @@
+/*--- bottom-footer --*/
+.frame-bg-wrapper{
+    width: 100%;
+    position: relative;
+    padding-top: 130px;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 82px;
+            bottom: -39px;
+            background-image: url('../images/frame.png');
+            opacity: 0.5;
+        }
+}
+.frame-bg-wrapper1{
+    width: 100%;
+    position: relative;
+    padding-top: 130px;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 82px;
+            bottom: 0px;
+            background-image: url('../images/frame.png');
+           
+        }
+}
+.dg-food-footer-wrapper{
+    width: 100%;
+    padding: 50px 0px 0px;
+    position: relative;
+    background: linear-gradient(279.47deg, #343434 0%, #0D0D0D 100%);
+        .footer-main-wrapper{
+            width: 100%;
+            display: grid;
+            grid-auto-columns: minmax(0rem, auto);
+            grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+            grid-gap: 35px;
+                .footer-box{
+                    h2.portlet-title-text {
+                        display: none;
+                    }
+                    .footer-title{
+                        h3{
+                            color: $white-color;
+                            padding-bottom: 12px;
+                        }
+                        border-bottom: 1px solid $primary-color-one;
+                    }
+                    .footer-logo{
+                        margin-bottom: 20px;
+                        color: $white-color;
+                    }
+                    .footer-add{
+                        display: flex;
+                        gap: 15px;
+                        margin-bottom: 18px;
+                            p{
+                                color: $white-color;
+                            }
+                    }
+                    .footer-links{
+                        margin-top: 20px;
+                        ul{
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 11px;
+                                li{
+                                    a{
+                                        color: $white-color;
+                                        display: flex;
+                                            span{
+                                                display: inline-block;
+                                                padding-right: 10px;
+                                            }
+                                            &:hover{
+                                                color: $primary-color-one;
+                                            }
+                                    }
+                                }
+                        }
+                    }
+                    .social-icon{
+                        display: flex;
+                        gap: 10px;
+                        margin-top: 10px;
+                            
+                                span{
+                                    display: inline-block;
+                                    width: 40px;
+                                    height: 40px;
+                                    line-height: 38px;
+                                    text-align: center;
+                                    background-color: $white-color;
+                                    border: 1px solid $white-color;
+                                    border-radius: 50%;
+                                    img{
+                                        width:16px;
+                                        padding: 4px;
+                                        }
+                                }
+                                &:hover{
+                                    span{
+                                        border: 1px solid $primary-color-one;
+                                    }
+                                }
+                            
+                    }
+                }
+        }
+        .footer-bg-img{
+            img{
+                width: 100%;
+            }
+        }
+}
+.bottom-footer-main-wrapper{
+    width: 100%;
+    display: flex;
+    background-color: $bg-footer;
+    position: relative;
+    z-index: 1;
+        .bottom-footer-box{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            .bf-left{
+                width: 50%;
+                p{
+                    color: $white-color;
+                }
+            }
+            .bf-right{
+                clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
+                background-color: $white-color;
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 12px 0px;
+                gap: 20px;
+                
+            }
+        }
+       &:after{
+            content: '';
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: 14%;
+            background-color: $white-color;
+            z-index: -1;
+       }
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="bd.gov.dgfood.movement.contractor.model.MovementContractor">
+		<field name="uuid" type="String" />
+		<field name="movementContractorId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="name" type="String" />
+		<field name="mobileNumber" type="String" />
+		<field name="nationalId" type="long" />
+		<field name="emailAddress" type="String" />
+		<field name="dateOfBirth" type="Date" />
+		<field name="gender" type="int" />
+		<field name="fatherName" type="String" />
+		<field name="motherName" type="String" />
+		<field name="maritalStatus" type="int" />
+		<field name="type" type="String" />
+		<field name="organizationName" type="String" />
+		<field name="tradeLicenseNumber" type="String" />
+		<field name="tradeLicenseExpiryDate" type="Date" />
+		<field name="vehicle" type="String" />
+		<field name="vehicleCount" type="int" />
+		<field name="vehicleCapacity" type="Map" />
+		<field name="userId" type="long" />
+		<field name="password" type="String" />
+		<field name="applicationNumber" type="long" />
+		<field name="businessCode" type="long" />
+		<field name="version" type="double" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="bd.gov.dgfood.movement.contractor.model.SubProgram">
+		<field name="subProgramId" type="long" />
+		<field name="deliveryNo" type="String" />
+		<field name="memoNo" type="String" />
+		<field name="sendingDepot" type="String" />
+		<field name="sendingPlantDesc" type="String" />
+		<field name="receivingDepot" type="String" />
+		<field name="receivingPlantDesc" type="String" />
+		<field name="product" type="String" />
+		<field name="quantity" type="Map" />
+		<field name="deliveryDate" type="Date" />
+		<field name="requestedDate" type="Date" />
+		<field name="forwardingAgent" type="String" />
+		<field name="vehicleSendDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="userId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="bd.gov.dgfood.movement.contractor.model.VInvoice">
+		<field name="vInvoiceId" type="long" />
+		<field name="vInvoiceNo" type="String" />
+		<field name="deliveryNo" type="String" />
+		<field name="sendingPlant" type="String" />
+		<field name="sendingPlantDesc" type="String" />
+		<field name="receivingPlant" type="String" />
+		<field name="receivingPlantDesc" type="String" />
+		<field name="userName" type="String" />
+		<field name="departureDate" type="Date" />
+		<field name="materialNo" type="String" />
+		<field name="materialDescription" type="String" />
+		<field name="quantity" type="Map" />
+		<field name="bagQuantity" type="Double" />
+		<field name="grossWeight" type="Double" />
+		<field name="netWeight" type="Double" />
+		<field name="storageLocation" type="String" />
+		<field name="storageBin" type="String" />
+		<field name="carrier" type="String" />
+		<field name="transportationMode" type="String" />
+		<field name="meansOfTransport" type="String" />
+		<field name="createDate" type="Date" />
+	</model>
+</model-hints>

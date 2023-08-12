@@ -1,0 +1,179 @@
+.check-btn-fixd {
+	.container-fluid-max-xl {
+		max-width: 100%;
+		padding: 0;
+	}
+	.lfr-ddm__default-page-header {
+		display: none;
+	}
+	.ddm-form-page {
+		p {
+			&.text-secondary {
+				display: none;
+			}
+		}
+	}
+	.ddm-field-container {
+		padding: 0;
+	}
+	.portlet-forms {
+		.lfr-ddm-legend {
+			display: none;
+		}
+	}
+	.lfr-ddm-form-container {
+		.lfr-ddm-form-pagination-controls {
+			padding: 0;
+		}
+	}
+	.ddm-field {
+		.form-group {
+			fieldset {
+				padding: 0;
+				border: 0;
+			}
+		}
+	}
+	.custom-checkbox {
+		label {
+			display: flex;
+			line-height: 30px;
+			gap: 12px;
+			padding: 12px 0px;
+			.custom-control-input {
+				opacity: 0;
+				display: none;
+			}
+		}
+	}
+	.custom-control-input {
+		& + .custom-control-label {
+			position: relative;
+			cursor: pointer;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			color: #111;
+			font-weight: bold;
+			&:before {
+				content: '';
+				margin-right: 10px;
+				display: inline-block;
+				vertical-align: text-top;
+				width: 22px;
+				height: 22px;
+				border: 1px solid #5bb600;
+				background: transparent;
+				border-radius: 5px;
+			}
+		}
+		&:hover {
+			& + .custom-control-label {
+				background: transparent;
+			}
+		}
+		&:checked {
+			& + .custom-control-label {
+				&:before {
+					background: #5bb600;
+					border-color: #5bb600;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					left: 6px;
+					top: 54%;
+					background: #fff;
+					width: 2px;
+					height: 2px;
+					box-shadow: 2px 0 0 #fff, 4px 0 0 #fff, 4px -2px 0 #fff, 4px -4px 0 #fff, 4px -6px 0 #fff, 4px -8px 0 #fff;
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+	span {
+		&.custom-control-label {
+			.custom-control-label-text {
+				width: 80%;
+				line-height: 25px;
+				margin-left: 12px;
+			}
+		}
+	}
+	.form-check {
+		.lfr-ddm-form-container {
+			.lfr-ddm-form-pagination-controls {
+				button {
+					margin-bottom: 0;
+					display: inline-block;
+					min-width: 140px;
+					padding: 0px 10px;
+					height: 50px;
+					line-height: 46px;
+					text-align: center;
+					border-radius: 6px;
+					font-weight: 600;
+					color: #ffffff;
+					background-color: #5BB600;
+					border: 2px solid #5BB600;
+					position: relative;
+					&:hover {
+						background-color: transparent;
+						color: #5BB600;
+					}
+				}
+			}
+		}
+	}
+}
+.fixd-btn-lik-con {
+	position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+	.fixd-btn-lik-con {
+		.guidline-login-fixd {
+			position: absolute;
+			left: 160px;
+			bottom: 15px;
+		}
+	}
+	
+}
+@media only screen and (max-width: 767px) {
+	.dg-food-grain-main-wrapper {
+		.dg-food-grain-inner-page-wrapper {
+			.food-grain-app-guidline-wrappper {
+				.guidline-footer {
+					display: inline-block;
+					width: 100%;
+					text-align: center;
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+	.check-btn-fixd {
+		.lfr-ddm-form-container {
+			.lfr-ddm-form-pagination-controls {
+				width: 100%;
+				text-align: center;
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
+		.form-check {
+			.lfr-ddm-form-container {
+				.lfr-ddm-form-pagination-controls {
+					button {
+						margin: 0 auto;
+						float: none !important;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,4 @@
+Bundle-Name: dgfood-credit-other-priority-customer-web
+Bundle-SymbolicName: bd.gov.dgfood.credit.other.priority.customer.web
+Bundle-Version: 1.0.0
+Export-Package: bd.gov.dgfood.credit.other.priority.customer.web.constants

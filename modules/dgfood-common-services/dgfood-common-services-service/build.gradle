@@ -1,0 +1,12 @@
+dependencies {
+	compile project(":modules:dgfood-common-services:dgfood-common-services-api")
+	compileOnly project(":modules:dgfood-common-util")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../dgfood-common-services-api/src/main/java"
+}
+
+group = "bd.gov.dgfood.common.services"

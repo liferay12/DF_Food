@@ -1,0 +1,4 @@
+Bundle-Name: dgfood-override-mvc-command
+Bundle-SymbolicName: bd.gov.dgfood.override.mvc.command
+Bundle-Version: 1.0.0
+Export-Package: bd.gov.dgfood.override.mvc.command.api

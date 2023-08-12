@@ -1,0 +1,675 @@
+info:
+    description: "DgfoodHeadlessLicenseManagementSystem REST API"
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "DgfoodHeadlessLicenseManagementSystem"
+    version: v1.0
+openapi: 3.0.1
+servers:
+  - url: 'http://localhost:8073/o//dgfood-headless-license-management-system/v1.0/'
+    description: SwaggerHub API Auto Mocking
+  - url: 'http://localhost:8073/o//dgfood-headless-license-management-systemv1.0/'
+components:
+  schemas:
+    FGLicenseApplicationDetails:
+      description: Contains all of the data for a single FGLicense.
+      properties:
+        id:
+          description: The fglicense internal ID.
+          format: int64
+          readOnly: true
+          type: integer
+        applicantNationalId:
+          format: int64
+          type: integer
+        emailAddress:
+          type: string
+        applicantMobileNumber:
+          type: string
+        dateOfBirth:
+          description: The applicants date of birth, in ISO 8601 format.
+          format: date-time
+          type: string
+        applicantName:
+          type: string
+        applicantFathersName:
+          type: string
+        applicantMothersName:
+          type: string
+        applicantGender:
+          type: integer
+        maritalStatus:
+          type: integer
+        permanentAddress:
+          $ref: '#/components/schemas/Address'
+        presentAddress:
+          $ref: '#/components/schemas/Address'
+        tradeLicenseNumber:
+          type: string
+        tradeLicenseExpiry:
+          description: The applicants trade license validity date, in ISO 8601 format.
+          format: date-time
+          type: string
+        taxIdentificationNo:
+          type: string
+        businessIdentificationNo:
+          type: string
+        tradeLicenseIssuerCode:
+          type: string
+        tradeLicenseIssueCity:
+          type: string
+        businessName:
+          type: string
+        businessType:
+          type: string
+        businessAddress:
+          $ref: '#/components/schemas/Address'
+        sameAsPermanentAddress:
+          type: boolean
+        transactionNumber:
+          type: string
+        reason:
+          description: reason for duplicate license request
+          type: string
+        comments:
+          description: comment for renewal & duplicate license request
+          type: string
+        applicationNumber:
+          readOnly: true
+          type: string
+        applicationStatus:
+          description: The fglicenses status (approved, pending, rejected).
+          readOnly: true
+          type: integer
+        typeOfLicense:
+          type: string
+        foodGrainLicenseNumber:
+          readOnly: true
+          type: string
+        foodGrainLicenseIssueDate:
+          description: The applicants food grain license issued date, in ISO 860 format.
+          format: date-time
+          readOnly: true
+          type: string
+        foodGrainLicenseExpiryDate:
+          description: The applicants food grain license validity date, in ISO 8601 format.
+          format: date-time
+          readOnly: true
+          type: string
+        version:
+          description: The latest version of the approved fglicense details.
+          format: double
+          readOnly: true
+          type: number
+        createdBy:
+          description: 0 if it newly created.
+          format: int64
+          type: integer
+        modifiedBy:
+          description: 0 if it newly created.
+          format: int64
+          type: integer
+        createdDate:
+          format: date-time
+          readOnly: true
+          type: string
+        modifiedDate:
+          format: date-time
+          readOnly: true
+          type: string
+        profilePhotographDocument:
+          $ref: '#/components/schemas/Attachment'
+        tradeLicenseNumberDocument:
+          $ref: '#/components/schemas/Attachment'
+        taxIdentificationNumberDocument:
+          $ref: '#/components/schemas/Attachment'
+        businessIdentificationNumberDocument:
+          $ref: '#/components/schemas/Attachment'
+        challanDocument:
+          $ref: '#/components/schemas/Attachment'
+        attachments:
+          items:
+            $ref: '#/components/schemas/Attachment'
+          type: array
+      type: object
+    FGLicenses:
+      description: Contains the list of FGLicense.
+      properties:
+        fgLicenseApplicationDetailses:
+          items:
+            $ref: '#/components/schemas/FGLicenseApplicationDetails'
+          type: array
+        totalCount:
+          format: int64
+          type: integer
+    NewFGLicenseApplication:
+      description: Contains all of the data for a single FGLicense.
+      properties:
+        applicantNationalId:
+          format: int64
+          type: integer
+        emailAddress:
+          type: string
+        applicantMobileNumber:
+          type: string
+        dateOfBirth:
+          description: The applicants date of birth, in ISO 8601 format.
+          format: date-time
+          type: string
+        applicantName:
+          type: string
+        applicantFathersName:
+          type: string
+        applicantMothersName:
+          type: string
+        applicantGender:
+          type: integer
+        maritalStatus:
+          type: integer
+        permanentAddress:
+          $ref: '#/components/schemas/Address'
+        presentAddress:
+          $ref: '#/components/schemas/Address'
+        tradeLicenseNumber:
+          type: string
+        tradeLicenseExpiry:
+          description: The applicants trade license validity date, in ISO 8601 format.
+          format: date-time
+          type: string
+        taxIdentificationNo:
+          type: string
+        businessIdentificationNo:
+          type: string
+        tradeLicenseIssuerCode:
+          type: string
+        tradeLicenseIssueCity:
+          type: string
+        businessName:
+          type: string
+        businessType:
+          type: string
+        businessAddress:
+          $ref: '#/components/schemas/Address'
+        acknowledge:
+          type: boolean
+        sameAsPermanentAddress:
+          type: boolean
+        password:
+          type: string
+        retypedPassword:
+          type: string
+      type: object    
+    RenewalDuplicateFGLicenseApplication:
+      description: Contains all of the data for a FGLicense renewal and duplicate.
+      properties:
+        tradeLicenseNumber:
+          type: string
+        tradeLicenseNumberPhotocopy:
+          type: string
+        licenseType:
+          type: string
+        reason:
+          description: reason for duplicate or renewal license request
+          type: string
+        comments:
+          description: comment for renewal & duplicate license request
+          type: string
+        acknowledge:
+          type: boolean
+      type: object
+    UpdateFGLicenseApplication:
+      description: Contains all of the data for a single FGLicense.
+      properties:
+        applicantMobileNumber:
+          type: string
+        applicantGender:
+          type: integer
+        maritalStatus:
+          type: integer
+        presentAddress:
+          $ref: '#/components/schemas/Address'
+        acknowledge:
+          type: boolean
+        sameAsPermanentAddress:
+          type: boolean
+      type: object    
+    ReviewFGLicenseApplication:
+      description: Contains all of the data for a FGLicense review.
+      properties:
+        transitionName:
+          type: string
+        licenseType:
+          type: string
+        comment:
+          description: comment for review license request
+          type: string
+      type: object
+    UploadChallanFGLicenseApplication:
+      description: Contains all of the data for a FGLicense review.
+      properties:
+        transactionNumber:
+          type: string
+        challanDocument:
+          type: string
+      type: object
+    FGLicenseApplicationStatus:
+      description: Contains the data for a FGLicense status.
+      properties:
+        applicantNationalId:
+          format: int64
+          type: integer
+        dateOfBirth:
+          description: The applicants date of birth, in ISO 8601 format.
+          format: date-time
+          type: string
+        applicationNumber:
+          readOnly: true
+          type: string
+        applicationStatus:
+          description: The fglicenses status (approved, pending, rejected).
+          readOnly: true
+          type: integer
+        transactionNumber:
+          type: string
+        challanDocument:
+          $ref: '#/components/schemas/Attachment'
+      type: object
+    TransitionFGLicenseApplication:
+      description: Contains all of the data for a FGLicense Transitions.
+      properties:
+        id:
+          description: The fglicense internal ID.
+          format: int64
+          readOnly: true
+          type: integer
+        transitions:
+          items:
+            type: string
+          type: array
+        licenseType:
+          type: string
+      type: object
+    Location:
+      description: Represents the fglicense applicants address information.
+      properties:
+        id:
+          format: int64
+          type: integer
+        value:
+          readOnly: true
+          type: string
+      type: object
+    Address:
+      description: Represents the fglicense applicants address information.
+      properties:
+        region:
+          $ref: '#/components/schemas/Location'
+        district:
+          $ref: '#/components/schemas/Location'
+        upzilla:
+          $ref: '#/components/schemas/Location'
+        cityCorporationOrMuncipalty:
+          $ref: '#/components/schemas/Location'
+        unionOrWard:
+          $ref: '#/components/schemas/Location'
+        villageOrRoad:
+          type: string
+        mouzaOrMoholla:
+          type: string
+        zipCode:
+          format: int64
+          type: integer
+        postOffice:
+          type: string
+        address:
+          type: string
+        addressType:
+          type: string
+      type: object
+    Attachment:
+      description: Represents the fglicense applicants address information.
+      properties:
+        id:
+          format: int64
+          type: integer
+        url:
+          readOnly: true
+          type: string
+        category:
+          readOnly: true
+          type: string
+      type: object
+    ResponseDetails:
+      description: Repesents response details
+      properties: 
+        apiStatus:
+          type: boolean
+        msg:
+          type: string
+        title:
+          type: string
+        data:
+          type: string 
+      type: object                        
+paths:
+  /fglicense-applications:
+    get:
+      description: Retrieves the fglicenses. Results can be paginated, filtered, and searched.
+      operationId: getFglicenseAccountsPage
+      parameters:
+        - in: query
+          name: keywords
+          schema:
+            type: string
+        - in: query
+          name: filter
+          schema:
+            type: string
+        - in: query
+          name: page
+          schema:
+            type: integer
+        - in: query
+          name: pageSize
+          schema:
+            type: integer
+        - in: query
+          name: sort
+          schema:
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/FGLicenseApplicationDetails'
+                type: array
+            application/xml:
+              schema:
+                items:
+                  $ref: '#/components/schemas/FGLicenseApplicationDetails'
+                type: array
+          description: ''
+      tags: ["FGLicenseApplicationDetails"]
+    post:
+      description: Creates a new fg license
+      operationId: postFglicenseApplication
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewFGLicenseApplication'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/NewFGLicenseApplication'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ResponseDetails'
+          description: ''
+      tags: ["FGLicenseApplicationDetails"]
+  /fglicense-applications/{nationalId}:
+    get:
+      description: Retrieves the approved fglicense list based on national id
+      operationId: getFglicenseApplicationsByNationalId
+      parameters:
+        - in: path
+          name: nationalId
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: foodGrainLicenseNumber
+          schema:
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FGLicenses'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/FGLicenses'
+          description: ''
+      tags: ["FGLicenseApplicationDetails"]
+  /fglicense-application:
+    get:
+      description: Retrieves the fglicense details
+      operationId: getFglicenseApplication
+      parameters:
+        - in: query
+          name: applicationNumber
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: foodGrainLicenseNumber
+          schema:
+            type: string
+        - in: query
+          name: tradeLicenseNumber
+          schema:
+            type: string
+        - in: query
+          name: applicationType
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ResponseDetails'
+          description: ''
+      tags: ["FGLicenseApplicationDetails"]
+  /fglicense-application/status:
+    get:
+      description: Retrieves the fglicense status
+      operationId: getFglicenseApplicationStatus
+      parameters:
+        - in: query
+          name: nationalId
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: applicationNumber
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: dateOfBirth
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FGLicenseApplicationStatus'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/FGLicenseApplicationStatus'
+          description: ''
+      tags: ["FGLicenseApplicationDetails"]
+  /fglicense-application/recent:
+    get:
+      description: Retrieves the status of most recent fglicense application
+      operationId: getFglicenseRecentApplicationStatus
+      parameters:
+        - in: query
+          name: foodGrainLicenseNumber
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: applicationType
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FGLicenseApplicationStatus'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/FGLicenseApplicationStatus'
+          description: ''
+      tags: ["FGLicenseApplicationDetails"]
+  /fglicense-application/{foodGrainLicenseNumber}/update:
+    put:
+      description: Update the fglicense details with information sent in the request body as a new version. Any missing fields are deleted unless they are required.
+      operationId: putFglicenseApplicationUpdate
+      parameters:
+        - in: path
+          name: foodGrainLicenseNumber
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateFGLicenseApplication'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/UpdateFGLicenseApplication'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FGLicenseApplicationDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/FGLicenseApplicationDetails'
+          description: FGLicense details successfully updated
+      tags: ["FGLicenseApplicationDetails"]
+  /fglicense-application/{applicationNumber}/upload-challan:
+    put:
+      description: Update the fglicense details with information sent in the request body as a new version. Any missing fields are deleted unless they are required.
+      operationId: putFglicenseApplicationUploadChallan
+      parameters:
+        - in: path
+          name: applicationNumber
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UploadChallanFGLicenseApplication'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/UploadChallanFGLicenseApplication'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FGLicenseApplicationDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/FGLicenseApplicationDetails'
+          description: FGLicense details successfully updated
+      tags: ["FGLicenseApplicationDetails"]
+  /fglicense-application/{applicationNumber}/review:
+    put:
+      description: Review fglicense request information sent in the request body.
+      operationId: putFglicenseApplicationReview
+      parameters:
+        - in: path
+          name: applicationNumber
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReviewFGLicenseApplication'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/ReviewFGLicenseApplication'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FGLicenseApplicationDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/FGLicenseApplicationDetails'
+          description: FGLicense details successfully updated
+      tags: ["FGLicenseApplicationDetails"]
+  /fglicense-application/{foodGrainLicenseNumber}/renewal-duplicate:
+    put:
+      description: Submit renewal fglicense request with trade license & food grain license details. information sent in the request body as a new version. Any missing fields are deleted unless they are required.
+      operationId: putFglicenseApplicationRenewalDuplicate
+      parameters:
+        - in: path
+          name: foodGrainLicenseNumber
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RenewalDuplicateFGLicenseApplication'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/RenewalDuplicateFGLicenseApplication'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FGLicenseApplicationDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/FGLicenseApplicationDetails'
+          description: FGLicense details successfully updated
+      tags: ["FGLicenseApplicationDetails"]
+  /fglicense-accounts/{applicationNumber}/transition/{licenseType}:
+    get:
+      description: Retrieves the fglicense transition details
+      operationId: getFglicenseApplicationTransition
+      parameters:
+        - in: path
+          name: licenseType
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: applicationNumber
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransitionFGLicenseApplication'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/TransitionFGLicenseApplication'
+          description: ''
+      tags: ["FGLicenseApplicationDetails"]

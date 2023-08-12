@@ -1,0 +1,10 @@
+Bundle-Name: dgfood-movement-contractor-api
+Bundle-SymbolicName: bd.gov.dgfood.movement.contractor.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	bd.gov.dgfood.movement.contractor.exception,\
+	bd.gov.dgfood.movement.contractor.model,\
+	bd.gov.dgfood.movement.contractor.service,\
+	bd.gov.dgfood.movement.contractor.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../dgfood-movement-contractor-service/service.xml

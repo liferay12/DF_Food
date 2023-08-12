@@ -1,0 +1,4 @@
+Bundle-Name: dgfood-grievance-web
+Bundle-SymbolicName: bd.gov.dgfood.grievance
+Bundle-Version: 1.0.0
+Export-Package: bd.gov.dgfood.grievance.constants

@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds"
+	package-path="bd.gov.dgfood.farmer.information.management.system">
+	<namespace>DGFOOD</namespace>
+	
+	<!-- Farmer Registration Master Table -->
+	<entity local-service="true" name="FarmerRegistration"
+		table="DGFood_FarmerRegistration" remote-service="true" uuid="true">
+
+		<!-- Primary fields -->
+		<column name="farmerRegistrationId" primary="true" type="long"></column>
+		<column name="applicationNumber"
+			type="String"></column>
+			
+		<!-- Custom Fields -->
+		<column name="nationalId" type="String"></column>
+		<column name="emailAddress" type="String"></column>
+		<column name="mobileNumber" type="String"></column>
+		<column name="dateOfBirth" type="Date"></column>
+
+		<column name="farmerName" type="String"></column>
+		<column name="fatherName" type="String"></column>
+		<column name="motherName" type="String"></column>
+		<column name="gender" type="int"></column>
+		<column name="maritalStatus" type="int"></column>
+		<column name="krishokCardNumber" type="String"></column>
+
+		<column name="cultivableLandSeason1" type="Map"></column>
+		<column name="cultivableLandSeason2" type="Map"></column>
+		<column name="cultivableLandSeason3" type="Map"></column>
+
+		<column name="farmerCategory " type="String"></column>
+
+		<column name="password " type="String"></column>
+
+		<!-- System Generated -->
+		<column name="remarks" type="String"></column>
+		<column name="businessCode" type="String"></column>
+		<column name="version" type="double"></column>
+		<column name="userId" type="long"></column>
+
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="modifiedBy" type="long"></column>
+
+		<!-- Workflow fields -->
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="farmerRegistrationId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="NationalId" return-type="FarmerRegistration"
+			unique="true">
+			<finder-column name="nationalId" />
+		</finder>
+		
+		<finder name="ApplicationNumber"
+			return-type="FarmerRegistration" unique="true">
+			<finder-column name="applicationNumber" />
+		</finder>
+		
+		<finder name="ApplicationNumberDob"
+			return-type="FarmerRegistration" unique="true">
+			<finder-column name="applicationNumber" />
+			<finder-column name="dateOfBirth" />
+		</finder>
+
+		<finder name="NationalIdDob" return-type="FarmerRegistration" unique="true">
+			<finder-column name="nationalId" />
+			<finder-column name="dateOfBirth" />
+		</finder>
+
+		<finder name="KrishokCard" return-type="FarmerRegistration"
+			unique="true">
+			<finder-column name="krishokCardNumber" />
+		</finder>
+
+		<finder name="BusinessCode"
+			return-type="FarmerRegistration" unique="true">
+			<finder-column name="businessCode" />
+		</finder>
+		
+		<finder name="UserId"
+			return-type="FarmerRegistration">
+			<finder-column name="userId" />
+		</finder>
+
+		<!-- References -->
+		<reference entity="AssetEntry"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetLink"
+			package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+	<!-- Farmer Registration Version Table -->
+	<entity local-service="true" name="FarmerRegistrationVersion"
+		table="DGFood_FarmerRegistrationVer" remote-service="true" uuid="true">
+
+		<!-- Primary fields -->
+		<column name="farmerRegistrationVersionId" primary="true" type="long"></column>
+		<column name="applicationNumber"
+			type="String"></column>
+			
+		<!-- Farmer Registration Master Id -->
+		<column name="farmerRegistrationId" type="long"></column>
+
+		<!-- Custom Fields -->
+		<column name="nationalId" type="String"></column>
+		<column name="emailAddress" type="String"></column>
+		<column name="mobileNumber" type="String"></column>
+		<column name="dateOfBirth" type="Date"></column>
+
+		<column name="farmerName" type="String"></column>
+		<column name="fatherName" type="String"></column>
+		<column name="motherName" type="String"></column>
+		<column name="gender" type="int"></column>
+		<column name="maritalStatus" type="int"></column>
+		<column name="krishokCardNumber" type="String"></column>
+
+		<column name="cultivableLandSeason1" type="Map"></column>
+		<column name="cultivableLandSeason2" type="Map"></column>
+		<column name="cultivableLandSeason3" type="Map"></column>
+
+		<column name="farmerCategory " type="String"></column>
+
+		<column name="password " type="String"></column>
+
+		<!-- System Generated -->
+		<column name="remarks" type="String"></column>
+		<column name="businessCode" type="String"></column>
+		<column name="version" type="double"></column>
+		<column name="userId" type="String"></column>
+
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="modifiedBy" type="long"></column>
+
+		<!-- Workflow fields -->
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="farmerRegistrationId" />
+			<order-column name="version" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="NationalId" return-type="Collection">
+			<finder-column name="nationalId" />
+		</finder>
+		
+		<finder name="ApplicationNumber"
+			return-type="Collection" >
+			<finder-column name="applicationNumber" />
+		</finder>
+
+		<finder name="BusinessCode"
+			return-type="Collection" >
+			<finder-column name="businessCode" />
+		</finder>
+		
+		<finder name="FarmerRegistrationId"
+			return-type="FarmerRegistrationVersion" unique="true">
+			<finder-column name="farmerRegistrationId" />
+			<finder-column name="version" />
+		</finder>
+
+		<!-- References -->
+		<reference entity="AssetEntry"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetLink"
+			package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+	<!-- Farmer Sales Proposal Master Table -->
+	<entity local-service="true" name="FarmerSalesProposal"
+		table="DGFood_SalesProposal" remote-service="true" uuid="true">
+
+		<!-- Primary fields -->
+		<column name="farmerSalesProposalId" primary="true" type="long"></column>
+		<column name="applicationNumber" type="String"></column>
+		
+		<!-- Linking fields for Farmer Registration Master -->
+		<column name="farmerRegistrationId" type="long"></column>
+		<column name="businessCode" type="String"></column>
+			
+		<!-- Custom Fields -->
+		<column name="currentSeason" type="String"></column>
+		<column name="foodGrainType" type="String"></column>
+		<column name="krishiCardNumber" type="String"></column>
+
+		<!-- Previous Season Production Details -->
+		<column name="pastProdDataSeason1" type="Map"></column>
+		<column name="pastProdDataSeason2" type="Map"></column>
+		<column name="pastProdDataSeason3" type="Map"></column>
+		
+		<!-- Succeeding Season Production Details -->
+		<column name="succeedingProdDataSeason1" type="Map"></column>
+		<column name="succeedingProdDataSeason2" type="Map"></column>
+		<column name="succeedingProdDataSeason3" type="Map"></column>
+		
+		<!-- Foodgrain procured from Farmer in last 4 seasons -->
+		<column name="grainProcuredInLast4Seasons " type="boolean"></column>
+		<column name="foodgranProcuredSeason1" type="Map"></column>
+		<column name="foodgranProcuredSeason2" type="Map"></column>
+		<column name="foodgranProcuredSeason3" type="Map"></column>
+		<column name="foodgranProcuredSeason4" type="Map"></column>
+		
+		<!-- Cultivable Land Details -->
+		<column name="cultivableLandSeason1" type="Map"></column>
+		<column name="cultivableLandSeason2" type="Map"></column>
+		<column name="cultivableLandSeason3" type="Map"></column>
+		
+		<!-- Inventory Details By LSD -->
+		<column name="foodgrainReceivedStatus" type="int"></column>
+		<column name="receivedFoodgrainQty" type="Map"></column>
+		<column name="foodgrainReceivedDate" type="Date"></column>
+		
+		<!-- System Generated -->
+		<column name="paymentStatus" type="int"></column>
+		<column name="remarks" type="String"></column>
+		
+		<column name="version" type="double"></column>
+
+		<column name="groupId" type="long"></column>
+		<column name="companyId" type="long"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="createdBy" type="long"></column>
+		<column name="modifiedBy" type="long"></column>
+
+		<!-- Workflow fields -->
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+
+		<order by="asc">
+			<order-column name="farmerSalesProposalId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="BusinessCode" return-type="Collection">
+			<finder-column name="businessCode" />
+		</finder>
+		
+		<finder name="ApplicationNumber" return-type="FarmerSalesProposal">
+			<finder-column name="applicationNumber" />
+		</finder>
+		
+		<!-- References -->
+		<reference entity="AssetEntry"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetLink"
+			package-path="com.liferay.portlet.asset" />
+	</entity>
+
+	<!-- Exception -->
+	<exceptions>
+		<exception>FarmerRegistrationInternalError</exception>
+		<exception>FarmerRegistrationVersionInternalError</exception>
+		<exception>FarmerSalesProposalInternalError</exception>
+		<exception>InvalidFarmerRegistrationData</exception>
+	</exceptions>
+
+</service-builder>

@@ -1,0 +1,14 @@
+.portlet{
+    margin-bottom: 0;
+}
+/* after theme create */
+* + address, * + dl, * + fieldset, * + figure, * + ol, * + p, * + pre, * + ul {
+    margin: 0 !important;
+}
+address, dl, fieldset, figure, ol, p, pre, ul{
+    margin: 0 !important;
+}
+/* after theme create */
+#body .portlet-title-text{
+    display: none;
+}

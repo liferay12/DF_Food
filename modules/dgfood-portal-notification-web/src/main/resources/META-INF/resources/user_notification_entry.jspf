@@ -1,0 +1,51 @@
+<%
+JSONObject jsonObject = JSONFactoryUtil.createJSONObject(userNotificationEvent.getPayload());
+
+boolean anonymous = jsonObject.getBoolean("anonymous");
+
+boolean notificationUnread =  !userNotificationEvent.isArchived() && (userNotificationFeedEntry != null) && userNotificationFeedEntry.isApplicable();
+
+
+%>
+
+<c:choose>
+	<c:when test="<%= userNotificationFeedEntry == null %>">
+		<liferay-ui:search-container-column-text
+			colspan="<%= 2 %>"
+		>
+			<liferay-ui:message key="notification-no-longer-applies" />
+		</liferay-ui:search-container-column-text>
+	</c:when>
+	<c:otherwise>
+		<c:choose>
+			<c:when test="<%= !userNotificationFeedEntry.isApplicable() %>">
+				<liferay-ui:search-container-column-text
+					colspan="<%= 2 %>"
+				>
+					<liferay-ui:message key="<%= userNotificationFeedEntry.getBody() %>" />
+				</liferay-ui:search-container-column-text>
+			</c:when>
+			<c:otherwise>
+
+				<liferay-ui:search-container-column-text
+					colspan="<%= 2 %>"
+				>
+					<c:if test="<%= notificationUnread %>">
+						<h4>
+					</c:if>
+							<%= userNotificationFeedEntry.getBody() %>
+					<c:if test="<%= notificationUnread %>">
+						</h4>
+					</c:if>
+
+					<h5 class="text-default">
+						<span>
+							<liferay-ui:message arguments="<%= LanguageUtil.getTimeDescription(request, System.currentTimeMillis() - userNotificationEvent.getTimestamp(), true) %>" key="x-ago" translateArguments="<%= false %>" />
+						</span>
+					</h5>
+				</liferay-ui:search-container-column-text>
+
+			</c:otherwise>
+		</c:choose>
+	</c:otherwise>
+</c:choose>

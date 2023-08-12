@@ -1,0 +1,6 @@
+Bundle-Name: dgfood-farmer-information-management-system-service
+Bundle-SymbolicName: bd.gov.dgfood.farmer.information.management.system.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit

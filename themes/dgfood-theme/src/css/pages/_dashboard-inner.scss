@@ -1,0 +1,936 @@
+// flg post login page css start
+
+.dg-food-post-login-main-wrapper{
+    width: 100%;
+    padding: 30px 50px;
+        .post-login-top-header{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .post-inner-login-content-wrapper{
+            width: 100%;
+             box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 5px;
+            padding: 30px;
+            .post-login-search-box{
+                width: 100%;
+               
+                form{
+                    .seach-box{
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        position: relative;
+                            input{
+                                border-top-right-radius: 0;
+                                border-bottom-right-radius: 0;
+                            }
+                            button{
+                                min-width: 123px;
+                                height: 40px;
+                                color: $white-color;
+                                border-radius: 5px;
+                                margin-top: 10px;
+                                font-weight: $font-weight2;
+                                background-color: $primary-color-one;
+                                position: absolute;
+                                right: 6px;
+                            }
+                    }
+                    small{
+                        color: $bg-black;
+                        padding-top: 10px;
+                        display: block;
+                    }
+                }
+            }
+            .dg-license-main-wrapper{
+                width: 100%;
+                display: grid;
+                grid-auto-columns: minmax(15rem, auto);
+                grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+                grid-gap: 1rem;
+                margin-top: 30px;
+                    .inner-license-box{
+                        border: 1px solid $primary-color-one;
+                        border-radius: 5px;
+                        background-color: $neutral-color-light;
+                        justify-content: space-between;
+                        display: flex;
+                        flex-direction: column;
+                        min-height: auto;
+                        position: relative;
+                            .inner-license-text{
+                                width: 100%;
+                                padding: 50px 30px 30px;
+                                h2{
+                                    color: $primary-color-one;
+                                    padding-top: 16px;
+                                }
+                               
+                            }
+                        
+                        .license-btn-box{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            padding: 20px;
+                            position: relative;
+                            border-top: 1px solid $primary-color-one;
+                                .dash-btn{
+                                    color: $primary-color-one;
+                                    font-weight: $font-weight1;
+                                }
+                                a{
+                                    font-weight: $font-weight1;
+                                }
+                                &:after{
+                                    content: '';
+                                    position: absolute;
+                                    width: 1px;
+                                    height: 100%;
+                                    background-color: $primary-color-one;
+                                    left: 50%;
+                                }
+                        }
+                        &.inactive{
+                            background-color: $neutral-color-four;
+                            border: 1px solid $red-color;
+                            position: relative;
+                                .inner-license-text{
+                                    h2{
+                                        color: $gray-color;
+                                        padding-top: 16px;
+                                    }
+                                    h4{
+                                        color: $gray-color;
+                                    }
+                                    h5{
+                                        color: $white-color;
+                                        position: absolute;
+                                        top: 0px;
+                                        right: 0px;
+                                        background-color: $red-color;
+                                        border-bottom-left-radius: 5px;
+                                        padding: 6px 22px;
+                                        font-weight: $font-weight2;
+                                        font-size: 16px;
+                                    }
+                                }
+                                .license-btn-box{
+                                    border-top: 1px solid $neutral-color-two;
+                                    a{
+                                        color: $gray-color;
+                                    }
+                                    .dash-btn{
+                                       
+                                    }
+                                    &:after{
+                                        background-color: $neutral-color-two !important;
+                                    }
+                                }
+                         
+                        }
+                        &.challan-upload{
+                            position: relative;
+                                .inner-license-text{
+                                    h5{
+                                        color: $white-color;
+                                        position: absolute;
+                                        top: 0px;
+                                        right: 0px;
+                                        background-color: $color-challan;
+                                        border-bottom-left-radius: 5px;
+                                        padding: 6px 22px;
+                                        font-weight: $font-weight2;
+                                        font-size: 16px;
+                                    }
+                                }
+                                .license-btn-box{
+                                    &:after{
+                                        display: none;
+                                    }
+                                }
+                        }
+                        &.pending-login{
+                            border: 1px solid $primary-color-two;
+                            .inner-license-text{
+                                h5{
+                                    color: $white-color;
+                                    position: absolute;
+                                    top: 0px;
+                                    right: 0px;
+                                    background-color: $primary-color-two;
+                                    border-bottom-left-radius: 5px;
+                                    padding: 6px 22px;
+                                    font-weight: $font-weight2;
+                                    font-size: 16px;
+                                }
+                            }
+                            .license-btn-box{
+                                &:after{
+                                    display: none;
+                                }
+                            }
+                        }
+                        &.rejected-login{
+                            .inner-license-text{
+                                h5{
+                                    color: $white-color;
+                                    position: absolute;
+                                    top: 0px;
+                                    right: 0px;
+                                    background-color: #ff0000;
+                                    border-bottom-left-radius: 5px;
+                                    padding: 6px 22px;
+                                    font-weight: $font-weight2;
+                                    font-size: 16px;
+                                }
+                            }
+                            .license-btn-box{
+                                &:after{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+}
+
+/*--- apply-box ---*/
+
+.apply-wrapper{
+    background-color: $bg-body;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    row-gap: 15px;
+    padding: 25px 30px;
+    margin-top: 30px;
+    .apply-content{
+        display: flex;
+        column-gap: 20px;
+        row-gap: 15px;
+        align-items: center;
+        width: 85%;
+        .apply-img{
+            background-color: $neutral-color-light;
+            border: 1px solid $primary-color-one;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .apply-text{
+            width: calc(100% - 60px);
+            span{
+                color: $gray-color;
+            }
+            .approve-appl{
+                display: flex;
+                column-gap: 40px;
+                margin-top: 10px;
+                li{
+                    color: $gray-color;
+                }
+            }
+        }
+    }
+    .apply-btn{
+        width: auto;
+    }
+    &.apply-disabled{
+        background-color: $bg-light-gray;
+        box-shadow: none;
+        .apply-content{
+            .apply-img{
+                background-color: $neutral-color-two;
+                border-color: $neutral-color-two;
+            }
+            .apply-text{
+                color: $neutral-color-two;
+                span{
+                    color: $neutral-color-two
+                }
+            }
+        }
+        .apply-btn{
+            .extra-secondary-btn{
+                background-color: $neutral-color-two;
+                border-color: $neutral-color-two;
+                color: $white-color;
+                span{
+                    svg{
+                        fill: $white-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// flg dashboard food grain license
+
+.deshbordMain{
+    .deshbordMaincontant{
+        .deshbordBody{
+            .dashboard-header{
+                .license-wrapper-btn{
+                    margin-top: 30px;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                        span{
+                            font-weight: $font-weight1;
+                        }
+                        
+                }
+                .btm-line{
+                    color: $primary-color-one;
+                    font-weight: $font-weight1;
+                    padding-top: 12px;
+                }
+                .filter-wrapper{
+                    h6{
+                        color: $primary-color-one;
+                        margin-bottom: 30px;
+                    }
+                    .filter-form{
+                        align-items: flex-end;
+                        .filter-btn{
+                            display: flex;
+                            justify-content: end;
+                            column-gap: 10px;
+                            flex-wrap: wrap;
+                            row-gap: 10px;
+                            .reset-btn{
+                                min-width: 130px;
+                            }
+                        }
+                    }
+                    // new
+                    form{
+                        .row{
+                            row-gap: 15px;
+                        }
+                        .extra-secondary-btn2{
+                            min-width: 170px;
+                            margin-top: 15px;
+                        }
+                        .form-check {
+                            margin: 20px 0 40px 0;
+                        }
+                    }
+                    .food-grain-search-filter-swrapper{
+                        width: 80%;
+                        display: inline-block;
+                            .d-flex{
+                                flex-wrap: wrap;
+                                gap: 8px;
+                                .date-input-field{
+                                    position: relative;
+                                    width: 24%;
+                                    display: inline-block;
+                                    margin-right: 5px;
+                                       label{
+                                        font-weight: $font-weight1;
+                                       }
+                                        input{
+                                            background-color: transparent;
+                                            border: 1px solid $primary-color-one;
+                                            z-index: 10;
+                                            height: 50px;
+                                            position: relative;
+                                            border-radius: 6px !important;
+                                                &:focus{
+                                                    background-color: transparent;
+                                                    border-color: $primary-color-one;
+                                                }
+                                        }
+                                    .date-icon{
+                                        position: absolute;
+                                        right: 18px;
+                                        bottom: 14px;
+                                        z-index: 9;
+                                    }
+                                    &.date-input-width{
+                                        width: 48%;
+                                    }
+                                    &.acl-input-width{
+                                        width: 32%;
+                                        margin-bottom: 6px;
+                                    }
+                                    &.ucf-input-width{
+                                        width: 22%;
+                                        margin-bottom: 6px;
+                                    }
+                                    .date{
+                                        .input-group-append{
+                                            position: absolute;
+                                            right: 20px;
+                                            top: 12px;
+                                            z-index: 9;
+                                        }
+                                    }
+                                }
+                                .input-select{
+                                    width: 24%;
+                                    display: inline-block;
+                                    margin-right: 5px;
+                                    label{
+                                        font-weight: $font-weight1;
+                                    }
+                                    input{
+                                        height: 50px;
+                                        background-color: transparent;
+                                        border: 1px solid $primary-color-one;
+                                    }
+                                    // .select2-dropdown {
+                                    //     top: -20px !important;
+                                    // }
+                                    &.acl-input-width{
+                                        width: 32%;
+                                        margin-bottom: 6px;
+                                    }
+                                }
+                            }
+                            
+                       
+                    }
+                    .search-filter-btn {
+                        width: 18%;
+                        display: inline-block;
+                        vertical-align: -44px;
+                        .d-flex{
+                            .extra-secondary-btn2{
+                                min-width: auto;
+                                height: 50px;
+                                line-height: 46px;
+                                margin: 0px 8px;
+                            }
+                            .extra-secondary-bg-btn{
+                                height: 50px;
+                                line-height: 46px;
+                                min-width: auto;
+                            }
+                        }
+                            
+                    }
+
+                }
+                // new
+                &.filter-head{
+                    margin-top: 30px;
+                    .filter-btn{
+                        display: flex;
+                        justify-content: end;
+                        column-gap: 12px;
+                        flex-wrap: wrap;
+                        row-gap: 12px;
+                        align-items: baseline;
+                    }
+                }
+            }
+            .dg-dashboard-table-wrapper{
+                width: 100%;
+                padding: 30px;
+                background-color: $white-color;
+                box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.08);
+                border-radius: 5px;
+                margin-top: 24px;
+                position: relative;
+                h3{
+                    color: $primary-color-one;
+                }
+                .dg-main-tbl-wrapper{
+                    .fill-btn{
+                        width: 100%;
+                        height: 35px;
+                        max-width: 100px;
+                        display: inline-block;
+                        background-color: $primary-color-one;
+                        color: $white-color;
+                        border-radius: 5px;
+                        text-align: center;
+                        line-height: 36px;
+                        font-size: $font-size14;
+                        font-weight: 700;
+                    }
+                    .not-submit{
+                        color: $red-color;
+                        font-weight: $font-weight1;
+                    }
+                    .submit{
+                        color: $primary-color-one;
+                        font-weight: $font-weight1;
+                    }
+                    .unresolved{
+                        color: $primary-color-two;
+                        font-weight: $font-weight1;
+                    }
+                }
+                form{
+                    .report-form{
+                        row-gap: 20px;
+                    }
+                }
+            }
+            .dashboard-grvnc{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                row-gap: 10px;
+                .extra-secondary-bg-btn{
+                    height: 40px;
+                    line-height: 40px;
+                }
+                .tbl-btn{
+                    margin-right: 125px;
+                        a{
+                            font-weight: $font-weight2;
+                        }
+                }
+            }
+        }
+    }
+}
+
+
+// uc inner page start
+
+.uc-inner-page-content-wrapper{
+    width: 100%;
+        .step-bar-main-wrapper{
+            ul{
+                grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+            }
+        }
+        .license-form-header-wrapper{
+            padding: 0px 50px;
+        }
+        .license-inner-form{
+            width: 100%;
+           
+            .step-form-wrapper{
+                width: 100%;
+                    form{
+                        .dashboard-profile-box{
+                            display: flex;
+                            justify-content: space-between;
+                                .dahsboard-profile-form{
+                                    width: 80%;
+                                        .flag-wrap{
+                                            .flag-edit{
+                                                position: absolute;
+                                                top: 40px;
+                                                right: 7px;
+                                                    a{
+                                                        background-color: $primary-color-one;
+                                                        color: $white-color;
+                                                        display: inline-block;
+                                                        padding: 7px 20px;
+                                                        border-radius: 5px;
+                                                    }
+                                            }
+                                        }
+                                        .radio-input{
+                                            ul{
+                                                .default-radio{
+                                                    background-color: $neutral-color-four;
+                                                    border: 1px solid $neutral-color-two;
+                                                        label{
+                                                            &:before{
+                                                                border: 1px solid $neutral-color-two;
+                                                            }
+                                                        }
+                                                }
+                                            }
+                                        }
+                                }
+                        }
+                        .custom-check-box-wrapper{
+                            width: 100%;
+                            display: flex;
+                            gap: 20px;
+                            align-items: center;
+                            padding-bottom: 15px;
+                                .form-check{
+                                    padding: 0;
+                                }
+                        }
+                        .form-group{
+                            margin-bottom: 20px;
+                                .input-box{
+                                    position: relative;
+                                    display: flex;
+                                        input{
+                                            border: 1px solid $primary-color-one;
+                                            height: 50px;
+                                            position: relative;
+                                            background-color: transparent;
+                                        }
+                                        .date-icon{
+                                            position: absolute;
+                                            right: 25px;
+                                            bottom: 12px;
+                                        }
+                                        &.date-disable{
+                                            input{
+                                                background-color: $neutral-color-four;
+                                                border: 1px solid $neutral-color-two;
+                                                position: relative;
+                                                z-index: 1;
+                                            }
+                                            .date-icon{
+                                                z-index: 99;
+                                            }
+                                        }
+                                }
+                        }
+                        .form-btn{
+                            gap: 20px;
+                            display: flex;
+                            .extra-secondary-btn{
+                                min-width: 123px;
+                            }
+                            p{
+                                color: $red-color;
+                                padding-top: 14px;
+                                span{
+                                    font-weight: $font-weight1;
+                                }
+                            }
+                        }
+                        .output{
+                            .colors{
+                                display: none;
+                                    .select-distric{
+                                        width: 100%;
+                                        display: flex;
+                                        gap: 20px;
+                                            .form-group{
+                                                width: 100%;
+                                            }
+                                    }
+                            }
+                            .zillaname{
+                                display: none;
+                            }
+                        }
+                    }
+            }
+        }
+}
+
+
+
+
+
+
+
+
+
+
+// -----------------responsive css-------------------
+@media (max-width: 1400px) {
+    .dg-food-dash-login-main-wrapper .login-form-box .login-form-wrapper{
+        padding: 0px 50px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .deshbordMain .deshbordMaincontant .deshbordBody .dashboard-header .filter-wrapper .food-grain-search-filter-swrapper{
+        width: 100%;
+    }
+    .styled-checkbox + label:before {
+        width: 25px;
+    }
+    .fgl-resolved-strip-wrapper.unresolved h4 {
+        font-size: 20px;
+    }
+    .dg-food-post-login-main-wrapper .post-login-top-header h4 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .fgl-resolved-strip-wrapper.unresolved{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .dashboard-head-wrapper .dashboard-right::before{
+        clip-path: polygon(0% 1%, 100% 0, 100% 100%, 0 100%);
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .license-inner-form .step-form-wrapper form .dashboard-profile-box{
+        flex-direction: column-reverse;
+        row-gap: 30px;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .license-inner-form .step-form-wrapper form .dashboard-profile-box .dahsboard-profile-form {
+        width: 100%;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .dashboard-header.filter-head .filter-btn{
+        justify-content: start;
+    }
+    .dg-food-dash-login-main-wrapper{
+        flex-direction: column;
+    }
+    .dg-food-dash-login-main-wrapper .login-img{
+        width: 100%;
+    }
+    .dg-food-dash-login-main-wrapper .login-form-box{
+        width: 100%;
+        padding: 0;
+    }
+    .dg-food-dash-login-main-wrapper .login-form-box .login-form-wrapper {
+        padding: 50px 50px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .deshbordMain .deshbordHeader .deshbordHeader-content .logo {
+        max-width: 145px;
+    }
+    .deshbordMain .deshbordHeader .deshbordHeader-content .headerContent-left h6 {
+        font-size: 14px;
+    }
+    .apply-wrapper .apply-content .apply-text h4 {
+        font-size: 16px;
+    }
+    .apply-wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .dashboard-header .filter-wrapper .food-grain-search-filter-swrapper .d-flex {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .dashboard-header .filter-wrapper .food-grain-search-filter-swrapper .date-input-field .date-icon {
+        bottom: 12px;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody {
+        padding-top: 70px;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .dashboard-header .filter-wrapper .food-grain-search-filter-swrapper .d-flex .date-input-field{
+        width: 100%;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .dashboard-header .filter-wrapper .food-grain-search-filter-swrapper .d-flex .input-select{
+        width: 100%;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .dashboard-header .filter-wrapper .food-grain-search-filter-swrapper .d-flex .date-input-field .date-icon{
+        bottom: 10px;
+    }
+    .fgl-resolved-strip-wrapper.unresolved div {
+        width: 100% !important;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .dashboard-header .filter-wrapper .food-grain-search-filter-swrapper .d-flex .date-input-field.date-input-width {
+        width: 100%;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .dg-profile-request-wrapper .compare-info-wrapper{
+        flex-direction: column;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .dg-profile-request-wrapper .compare-info-wrapper .previous-box{
+        width: 100%;
+        border: 0;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .dg-dashboard-table-wrapper h3 {
+        font-size: 18px;
+    }
+}
+@media (max-width: 680px) {
+    .dashboard-license-top-header{
+        align-items: self-start;
+        flex-direction: column;
+    }
+    .deshbordMain .deshbordHeader .deshbordHeader-content .headerContent-right .list .dash-notify-drop .dash-notification-box-wrapper{
+        width: 385px;
+        right: -89px;
+    }
+    .dashboard-license-top-header .nid-no {
+        width: 100%;
+    }
+    .dg-food-grain-track-main-wrapper .dg-food-grain-inner-page-wrapper{
+        flex-direction: column;
+    }
+    .dg-food-grain-track-main-wrapper .dg-food-grain-inner-page-wrapper .track-food-grain-image{
+        width: 100%;
+    }
+    .dg-food-grain-track-main-wrapper .dg-food-grain-inner-page-wrapper .track-food-grain-form{
+        width: 100%;
+    }
+    .dg-food-post-login-main-wrapper .post-inner-login-content-wrapper .dg-license-main-wrapper{
+        display: block;
+    }
+    .dg-food-post-login-main-wrapper .post-inner-login-content-wrapper .dg-license-main-wrapper .inner-license-box{
+        margin-bottom: 20px;
+    }
+    .dg-food-post-login-main-wrapper .pegination-wrapper ul{
+        flex-wrap: wrap;
+    }
+    .dg-food-post-login-main-wrapper {
+        padding: 30px 20px;
+    }
+}
+
+
+
+@media (max-width: 640px) {
+   
+    .deshbordMain .deshbordMaincontant .deshbordBody .dashboard-header .license-wrapper-btn {
+        align-items: self-start;
+        flex-direction: column;
+    }
+    .apply-wrapper .apply-content .apply-text .approve-appl{
+        flex-direction: column;
+        row-gap: 12px;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .license-inner-form .license-wrapper-btn {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .deshbordMain .deshbordMaincontant .deshbordBody .dashboard-header .filter-wrapper .search-filter-btn .d-flex {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+}
+@include for-575(){
+    .mydataTable .dataTables_wrapper .top{
+        position: unset !important;
+        margin-top: 12px;
+    }
+}
+@media (max-width: 580px) {
+    .apply-wrapper .apply-content{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .deshbordMain .deshbordHeader .deshbordHeader-content .headerContent-left h6{
+        display: none;
+    }
+    .dashboard-license-top-header .nid-no p span {
+        display: block;
+        padding-left: 0;
+    }
+    .color-input-strip{
+        padding: 0px 15px;
+    }
+    .color-input-strip p {
+        font-size: 13px;
+    }
+    .fgl-challan-strip-wrapper h4 {
+        font-size: 18px;
+    }
+    .dashboard-heading-strip{
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: flex-start;
+    }
+    .dg-food-dash-login-main-wrapper .login-img{
+        padding: 40px 50px;
+    }
+    .dg-food-dash-login-main-wrapper .login-img h2{
+        font-size: 30px;
+        max-width: 250px;
+    }
+}
+@media (max-width: 480px) {
+    .deshbordMain .deshbordHeader .deshbordHeader-content .headerContent-right .list .dash-notify-drop .dash-notification-box-wrapper .notify-box .noti-icon span {
+        width: 44px;
+        height: 44px;
+        line-height: 40px;
+    }
+    .deshbordMain .deshbordHeader .deshbordHeader-content .headerContent-right .list .dash-notify-drop .dash-notification-box-wrapper .notify-box .noti-icon span svg {
+        width: 18px;
+    }
+    .deshbordMain .deshbordHeader .deshbordHeader-content .headerContent-right .list .dash-notify-drop .dash-notification-box-wrapper .notify-box .noti-text h4 {
+        font-size: 14px;
+    }
+    .deshbordMain .deshbordHeader .deshbordHeader-content .headerContent-right .list .dash-notify-drop .dash-notification-box-wrapper .notify-box .noti-text a{
+        font-size: 14px;
+    }
+    .deshbordMain .deshbordHeader .deshbordHeader-content .headerContent-right .list .dash-notify-drop .dash-notification-box-wrapper {
+        width: 320px;
+        right: -125px;
+    }
+    .food-grain-license-app-form-inner-wrapper .license-form-header-wrapper .license-inner-form .step-form-wrapper form .form-btn{
+        flex-direction: column;
+    }
+    .dashboard-head-wrapper .dashboard-right .right-menu li a{
+        font-size: 13px;
+    }
+    .fgl-challan-strip-wrapper{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .fgl-resolved-strip-wrapper.unresolved{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .comment-box{
+        flex-direction: column;
+    }
+    .status-title {
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+    .dg-food-post-login-main-wrapper .post-inner-login-content-wrapper .dg-license-main-wrapper .inner-license-box .inner-license-text h2{
+        font-size: 24px;
+    }
+    .dg-food-post-login-main-wrapper .post-inner-login-content-wrapper .dg-license-main-wrapper .inner-license-box .inner-license-text h4 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 380px) {
+    .deshbordMain .deshbordHeader .deshbordHeader-content .headerContent-right .profile-dropdown a p{
+        display: none;
+    }
+    .deshbordMain .deshbordHeader .deshbordHeader-content .headerContent-right .list .dash-notify-drop .dash-notification-box-wrapper {
+        right: -21px;
+    }
+    .deshbordHeader .menu-dropdown .submenu{
+        left: inherit;
+        right: 0;
+    }
+    .dashboard-head-wrapper .dashboard-right .right-menu li{
+        padding: 0 14px;
+    }
+    .dashboard-head-wrapper .dashboard-right .right-menu {
+        padding-right: 12px !important;
+    }
+    .deshbordMain .deshbordHeader .deshbordHeader-content .headerContent-right .profile-dropdown .submenu{
+        right: 0;
+        left: inherit;
+    }
+    .dg-food-grain-track-main-wrapper .dg-food-grain-inner-page-wrapper .track-food-grain-form .tab-content .tab-pane-wrapper form .form-btn{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .custom-file-button label{
+        width: 100px;
+    }
+    .dg-food-dash-login-main-wrapper .login-form-box .login-form-wrapper {
+        padding: 40px 30px;
+    }
+    .dg-food-dash-login-main-wrapper .login-form-box .login-form-wrapper form {
+        margin-top: 20px;
+    }
+    .dg-food-dash-login-main-wrapper .login-form-box .login-form-wrapper form .forgot-pass .check-box-wrapper a {
+        font-size: 13px;
+    }
+}

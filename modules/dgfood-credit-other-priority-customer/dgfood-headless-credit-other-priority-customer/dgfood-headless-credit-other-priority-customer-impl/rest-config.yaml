@@ -1,0 +1,9 @@
+apiDir: "../dgfood-headless-credit-other-priority-customer-api/src/main/java"
+apiPackagePath: "bd.gov.dgfood.headless.credit.other.priority.customer"
+application:
+    baseURI: "/dgfood-headless-credit-other-priority-customer"
+    className: "DgfoodHeadlessCreditOtherPriorityCustomerApplication"
+    name: "DgfoodHeadlessCreditOtherPriorityCustomer"
+author: "krishna"
+#clientDir: "../dgfood-headless-credit-other-priority-customer-client/src/main/java"
+#testDir: "../dgfood-headless-credit-other-priority-customer-test/src/testIntegration/java"

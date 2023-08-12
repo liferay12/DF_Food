@@ -1,0 +1,13 @@
+Bundle-Name: dgfood-license-management-system-api
+Bundle-SymbolicName: bd.gov.dgfood.license.management.system.api
+Bundle-Version: 1.0.0
+Export-Package: \
+	bd.gov.dgfood.license.management.system.exception,\
+	bd.gov.dgfood.license.management.system.model,\
+	bd.gov.dgfood.license.management.system.service,\
+	bd.gov.dgfood.license.management.system.service.persistence,\
+	bd.gov.dgfood.license.management.system.constants,\
+	bd.gov.dgfood.license.management.system.util,\
+	bd.gov.dgfood.license.management.system.validator
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../dgfood-license-management-system-service/service.xml

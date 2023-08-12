@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds"
+	auto-namespace-tables="false"
+	package-path="bd.gov.dgfood.license.management.system">
+	<namespace></namespace>
+
+	<entity name="FGLicenseInfo" local-service="true"
+		table="fgl_master_info" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+		<column name="fgLicenseInfoId" primary="true" type="long" />
+
+		<!-- FK fields -->
+		<column name="fgLicenseMasterId" type="long" />
+		<column name="fgLicenseMDMId" type="long" />
+
+		<!-- FG License details -->
+		<column name="nationalId" type="String"></column>
+		<column name="applicationNumber" type="String" />
+		<column name="applicantName" type="String" />
+		<column name="tradeLicenseNumber" type="String" />
+
+		<column name="foodgrainLicenseNumber" type="String" />
+		<column name="foodgrainLicenseIssueDate" type="Date" />
+		<column name="foodgrainLicenseExpiryDate" type="Date" />
+
+		<column name="businessName" type="String" />
+		<column name="businessType" type="String" />
+		<column name="businessAddressId" type="long" />
+
+		<column name="version" type="double" />
+		<column name="applicationType" type="String"></column>
+		<column name="syncStatus" type="boolean"></column>
+		<column name="isExpired" type="boolean"></column>
+
+		<column name="paymentChallanId" type="long" />
+
+		<!-- Location tagging fields -->
+		<column name="division" type="String"></column>
+		<column name="district" type="String"></column>
+		<column name="upazila" type="String"></column>
+
+		<!-- Workflow fields -->
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
+
+		<!-- Liferay Default fields -->
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifiedDate" type="Date"></column>
+		<column name="modifiedBy" type="long"></column>
+
+		<finder return-type="Collection" name="NationalIdAndStatus">
+			<finder-column name="nationalId" />
+			<finder-column name="status" />
+		</finder>
+
+		<finder return-type="FGLicenseInfo"
+			name="ApplicationNumberNIDDateOfBirth">
+			<finder-column name="applicationNumber" />
+			<finder-column name="nationalId" />
+		</finder>
+
+		<finder return-type="FGLicenseInfo" name="ApplicationNumber">
+			<finder-column name="applicationNumber" />
+		</finder>
+
+		<finder return-type="FGLicenseInfo"
+			name="FoodgrainLicenseNumber">
+			<finder-column name="foodgrainLicenseNumber" />
+		</finder>
+
+		<!-- References -->
+		<reference entity="AssetEntry"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag"
+			package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetLink"
+			package-path="com.liferay.portlet.asset" />
+
+	</entity>
+
+	<entity name="FGLicenseDetails" local-service="true"
+		table="fgl_master_details" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+		<column name="fgLicenseMasterId" primary="true" type="long" />
+
+		<!-- FG License details -->
+		<column name="nationalId" type="String"></column>
+		<column name="applicationNumber" type="String" />
+		<column name="applicantName" type="String" />
+
+		<column name="tradeLicenseNumber" type="String" />
+		<column name="tradeLicenseExpiryDate" type="Date" />
+		<column name="tradeLicenseIssuerCode" type="String" />
+		<column name="tradeLicenseIssuerCity" type="String" />
+
+		<column name="businessIdentificationNumber" type="String" />
+		<column name="taxIdentificationNumber" type="String" />
+
+
+		<column name="paymentChallanId" type="long" />
+		<column name="tradeLicenseDocId" type="long" />
+		<column name="businessIdentificationDocId" type="long" />
+		<column name="taxIdentfctDocId" type="long" />
+		<column name="bankStatementDocId" type="long" />
+
+		<column name="reviewComments" type="String" />
+		<column name="comments" type="String" />
+		<column name="duplicateLicenseReasonId" type="String" />
+
+		<column name="applicationType" type="String"></column>
+	</entity>
+
+	<entity name="FGLicenseMDMData" local-service="true"
+		table="fgl_mdm_data" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+		<column name="fgLicenseMDMId" primary="true" type="long" />
+
+		<!-- FK fields -->
+		<column name="fgLicenseInfoId" type="long" />
+		<column name="fgLicenseMasterId" type="long" />
+
+		<column name="applicationMdmData" type="String"></column>
+
+	</entity>
+
+	<!-- Exceptions -->
+	<exceptions>
+		<exception>InvalidFGLicenseInformation</exception>
+		<exception>InvalidFGLicenseMasterDetails</exception>
+	</exceptions>
+</service-builder>

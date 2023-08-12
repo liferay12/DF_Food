@@ -1,0 +1,9 @@
+Bundle-Name: dgfood-reports
+Bundle-SymbolicName: bd.gov.dgfood.reports
+Bundle-Version: 1.0.0
+Export-Package: \
+	bd.gov.dgfood.reports.constants,\
+	bd.gov.dgfood.reports.portlet.util
+Import-Package: \
+*;resolution:=optional
+Include-Resource: @poi-3.10-FINAL.jar, @poi-ooxml-3.10-FINAL.jar, @poi-ooxml-schemas-3.10-FINAL.jar, @xml-apis-1.0.b2.jar, @xmlbeans-2.3.0.jar,@javers-core-5.6.3.jar, @picocontainer-2.15.jar, @gson-2.3.1.jar

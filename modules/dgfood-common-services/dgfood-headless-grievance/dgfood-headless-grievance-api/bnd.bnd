@@ -1,0 +1,8 @@
+Bundle-Name: dgfood-headless-grievance-api
+Bundle-SymbolicName: bd.gov.dgfood.headless.grievance.api
+Bundle-Version: 1.0.0
+Export-Package: \
+	bd.gov.dgfood.headless.grievance.dto.v1_0,\
+	bd.gov.dgfood.headless.grievance.resourc,\
+	bd.gov.dgfood.headless.grievance.resource.v1_0
+	e.v1_0

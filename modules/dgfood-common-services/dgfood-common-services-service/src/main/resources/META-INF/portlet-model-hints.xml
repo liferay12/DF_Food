@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="bd.gov.dgfood.common.services.model.Address">
+		<field name="addressId" type="long" />
+		<field name="region" type="long" />
+		<field name="district" type="long" />
+		<field name="upazilla" type="long" />
+		<field name="cityCorporationOrMunicipality" type="long" />
+		<field name="unionOrWard" type="long" />
+		<field name="zipCode" type="long" />
+		<field name="postOffice" type="String" />
+		<field name="villageOrRoad" type="String" />
+		<field name="mouzaOrMoholla" type="String" />
+		<field name="address" type="String" />
+		<field name="addressType" type="String" />
+		<field name="classPK" type="long" />
+		<field name="className" type="String" />
+	</model>
+	<model name="bd.gov.dgfood.common.services.model.AddressVersion">
+		<field name="addressVersionId" type="long" />
+		<field name="region" type="long" />
+		<field name="district" type="long" />
+		<field name="upazilla" type="long" />
+		<field name="cityCorporationOrMunicipality" type="long" />
+		<field name="unionOrWard" type="long" />
+		<field name="zipCode" type="long" />
+		<field name="postOffice" type="String" />
+		<field name="villageOrRoad" type="String" />
+		<field name="mouzaOrMoholla" type="String" />
+		<field name="address" type="String" />
+		<field name="addressType" type="String" />
+		<field name="classPK" type="long" />
+		<field name="className" type="String" />
+	</model>
+	<model name="bd.gov.dgfood.common.services.model.APIAudit">
+		<field name="apiAuditId" type="long" />
+		<field name="title" type="String" />
+		<field name="description" type="String" />
+		<field name="sender" type="String" />
+		<field name="receiver" type="String" />
+		<field name="requestPayload" type="String" />
+		<field name="responsePayload" type="String" />
+		<field name="requestClassName" type="String" />
+		<field name="requestClassPK" type="long" />
+		<field name="bulkRequest" type="boolean" />
+		<field name="requestTime" type="Date" />
+		<field name="responseTime" type="Date" />
+		<field name="userId" type="long" />
+		<field name="createDate" type="Date" />
+	</model>
+	<model name="bd.gov.dgfood.common.services.model.Attachment">
+		<field name="attachmentId" type="long" />
+		<field name="title" type="String" />
+		<field name="category" type="String" />
+		<field name="fileEntryId" type="long" />
+		<field name="openTextId" type="long" />
+		<field name="metadata" type="Map" />
+		<field name="classPK" type="long" />
+		<field name="className" type="String" />
+	</model>
+	<model name="bd.gov.dgfood.common.services.model.AttachmentVersion">
+		<field name="attachmentVersionId" type="long" />
+		<field name="title" type="String" />
+		<field name="category" type="String" />
+		<field name="fileEntryId" type="long" />
+		<field name="openTextId" type="long" />
+		<field name="metadata" type="Map" />
+		<field name="classPK" type="long" />
+		<field name="className" type="String" />
+	</model>
+	<model name="bd.gov.dgfood.common.services.model.BankAccountInformation">
+		<field name="uuid" type="String" />
+		<field name="bankAccountInformationId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="accountNumber" type="String" />
+		<field name="bankName" type="String" />
+		<field name="branchName" type="String" />
+		<field name="routingCode" type="String" />
+		<field name="status" type="int" />
+		<field name="version" type="String" />
+		<field name="classPK" type="long" />
+		<field name="classNameId" type="long" />
+	</model>
+	<model name="bd.gov.dgfood.common.services.model.DeliveryOrder">
+		<field name="uuid" type="String" />
+		<field name="deliveryOrderId" type="long" />
+		<field name="indentId" type="long" />
+		<field name="deliveryOrderNo" type="String" />
+		<field name="customerNo" type="String" />
+		<field localized="true" name="name" type="String" />
+		<field name="doDate" type="Date" />
+		<field localized="true" name="commodity" type="String" />
+		<field localized="true" name="commodityDescription" type="String" />
+		<field localized="true" name="doQty" type="String" />
+		<field localized="true" name="doQtyUnit" type="String" />
+		<field localized="true" name="depo" type="String" />
+		<field name="warehouseNo" type="String" />
+		<field name="khamaalNo" type="String" />
+		<field name="lUANo" type="String" />
+		<field name="lUADate" type="Date" />
+		<field localized="true" name="bagUnit" type="String" />
+		<field name="vehicleNo" type="String" />
+		<field localized="true" name="gateKeeper" type="String" />
+		<field name="goodsIssueDate" type="String" />
+		<field name="shipToParty" type="String" />
+		<field localized="true" name="shipToPartyName" type="String" />
+		<field localized="true" name="deliveredQty" type="String" />
+		<field localized="true" name="deliveredQtyUnit" type="String" />
+		<field name="companyId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+	</model>
+	<model name="bd.gov.dgfood.common.services.model.DGFUsers">
+		<field name="dgfUserId" type="long" />
+		<field name="nationalId" type="String" />
+		<field name="password" type="String" />
+		<field name="mobileNumber" type="String" />
+		<field name="email" type="String" />
+		<field name="birthDate" type="Date" />
+		<field name="maritalStatus" type="String" />
+		<field name="userId" type="long" />
+		<field name="presentAddressId" type="long" />
+		<field name="profileType" type="String" />
+	</model>
+	<model name="bd.gov.dgfood.common.services.model.Grievance">
+		<field name="uuid" type="String" />
+		<field name="grievanceId" type="long" />
+		<field name="grievanceNumber" type="String" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="grievanceCategory" type="long" />
+		<field name="userType" type="long" />
+		<field name="userName" type="String" />
+		<field name="userID" type="long" />
+		<field name="mobileNumber" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="complaintDetails" type="String">
+			<hint name="max-length">4000</hint>
+		</field>
+		<field name="attachmentId" type="long" />
+		<field name="status" type="int" />
+		<field name="responseDetails" type="String">
+			<hint name="max-length">4000</hint>
+		</field>
+		<field name="responseDate" type="Date" />
+		<field name="responseBy" type="long" />
+	</model>
+	<model name="bd.gov.dgfood.common.services.model.Indent">
+		<field name="uuid" type="String" />
+		<field name="indentId" type="long" />
+		<field name="allocationId" type="long" />
+		<field name="commodity" type="String" />
+		<field name="commodityDescription" type="String" />
+		<field name="quantity" type="double" />
+		<field name="quantityUnit" type="String" />
+		<field name="requiredDeliveryDate" type="Date" />
+		<field name="foodGrainissueDate" type="Date" />
+		<field name="netPrice" type="double" />
+		<field name="netPriceCurrencyKey" type="String" />
+		<field name="netValue" type="double" />
+		<field name="netValueCurrencyKey" type="String" />
+		<field name="salesOffice" type="String" />
+		<field name="depo" type="String" />
+		<field name="repaymentTerms" type="String" />
+		<field name="deliveryTerms" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="reason" type="int" />
+	</model>
+	<model name="bd.gov.dgfood.common.services.model.MDMSyncStatus">
+		<field name="mdmSyncStatusId" type="long" />
+		<field name="userType" type="String" />
+		<field name="className" type="String" />
+		<field name="classPk" type="long" />
+		<field name="requestPayload" type="String" />
+		<field name="mdmEndPoint" type="String" />
+		<field name="userId" type="long" />
+		<field name="createDate" type="Date" />
+	</model>
+	<model name="bd.gov.dgfood.common.services.model.UserDetails">
+		<field name="userDetailsId" type="long" />
+		<field name="nationalId" type="String" />
+		<field name="applicantName" type="String" />
+		<field name="fatherName" type="String" />
+		<field name="motherName" type="String" />
+		<field name="gender" type="String" />
+		<field name="nidPhotoAttachmentId" type="long" />
+		<field name="nidDivision" type="String" />
+		<field name="nidDistrict" type="String" />
+		<field name="nidUpzilla" type="String" />
+		<field name="nidUnion" type="String" />
+		<field name="nidVillage" type="String" />
+		<field name="nidWard" type="String" />
+		<field name="nidZipCode" type="long" />
+		<field name="houseAddress" type="String" />
+	</model>
+	<model name="bd.gov.dgfood.common.services.model.UserLocation">
+		<field name="uuid" type="String" />
+		<field name="userLocationId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="locationName" type="String" />
+		<field name="locationCode" type="String" />
+		<field name="locationId" type="long" />
+		<field name="locationType" type="String" />
+		<field name="userName" type="String" />
+		<field name="userId" type="long" />
+		<field name="roleKey" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedBy" type="long" />
+	</model>
+</model-hints>

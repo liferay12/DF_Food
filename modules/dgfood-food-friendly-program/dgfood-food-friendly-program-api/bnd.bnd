@@ -1,0 +1,11 @@
+Bundle-Name: dgfood-food-friendly-program-api
+Bundle-SymbolicName: bd.gov.dgfood.food.friendly.program.api
+Bundle-Version: 1.0.0
+Export-Package: \
+	bd.gov.dgfood.food.friendly.program.exception,\
+	bd.gov.dgfood.food.friendly.program.model,\
+	bd.gov.dgfood.food.friendly.program.service,\
+	bd.gov.dgfood.food.friendly.program.service.persistence,\
+	bd.gov.dgfood.food.friendly.program.constants
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../dgfood-food-friendly-program-service/service.xml

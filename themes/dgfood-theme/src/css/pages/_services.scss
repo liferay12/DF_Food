@@ -1,0 +1,46 @@
+.our-services-page {
+	.title-icon {
+		width: 41px;
+	}
+	h4 {
+		margin-bottom: 1rem;
+	}
+	.service-title {
+		border: none !important;
+		display: inline-flex;
+	}
+	.service-box-wrapper {
+		display: inline-flex;
+		width: 100%;
+		.serrvice-text {
+			width: 100%;
+			a {
+				display: flex;
+				width: 100%;
+			}
+		}
+		.serrvice-icon {
+			display: inline-block;
+			width: 64px;
+			height: 64px;
+			border: 1px solid #5BB600;
+			border-radius: 5px;
+			padding: 6px;
+			line-height: 42px;
+			margin-right: 12px;
+			img {
+				width: 50px;
+				min-width: 50px;
+			}
+		}
+		.service-title {
+			align-items: center;
+		}
+	}
+    .our-services-contents {
+    	img {
+    		margin: 15px !important;
+    	}
+    }
+}
+

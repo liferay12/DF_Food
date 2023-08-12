@@ -1,0 +1,6 @@
+Bundle-Name: dgfood-headless-credit-other-priority-customer-api
+Bundle-SymbolicName: bd.gov.dgfood.headless.credit.other.priority.customer.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	bd.gov.dgfood.headless.credit.other.priority.customer.dto.v1_0,\
+	bd.gov.dgfood.headless.credit.other.priority.customer.resource.v1_0

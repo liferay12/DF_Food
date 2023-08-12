@@ -1,0 +1,9 @@
+apiDir: "../dgfood-headless-food-friendly-program-api/src/main/java"
+apiPackagePath: "bd.gov.dgfood.headless.food.friendly.program"
+application:
+    baseURI: "/dgfood-headless-food-friendly-program"
+    className: "DgfoodHeadlessFoodFriendlyProgramApplication"
+    name: "DgfoodHeadlessFoodFriendlyProgram"
+author: "krishna"
+#clientDir: "../dgfood-headless-food-friendly-program-client/src/main/java"
+#testDir: "../dgfood-headless-food-friendly-program-test/src/testIntegration/java"

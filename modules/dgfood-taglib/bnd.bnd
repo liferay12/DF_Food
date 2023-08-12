@@ -1,0 +1,12 @@
+Bundle-Name: dgfood-taglib
+Bundle-SymbolicName: bd.gov.dgfood.taglib
+Bundle-Version: 1.0.0
+Provide-Capability:\
+	osgi.extender;\
+		osgi.extender="jsp.taglib";\
+		uri="http://bd.gov.dgfood/tld/ui";\
+		version:Version="${Bundle-Version}"
+Web-ContextPath: /dgfood-taglib
+Export-Package: \
+	bd.gov.dgfood.taglib.servlet.taglib,\
+	bd.gov.dgfood.taglib.util

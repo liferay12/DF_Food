@@ -1,0 +1,157 @@
+
+info:
+    description: "DG Food Headless Grievance REST API"
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "DG Food Headless Grievance"
+    version: v1.0
+openapi: 3.0.1
+components:
+    schemas:
+        Grievance:
+            description: Contains all of the data for a Grievance.
+            properties:
+                id:
+                    description: The grievance internal ID.
+                    format: int64
+                    readOnly: true
+                    type: integer
+                grievanceNumber:
+                    readOnly: true
+                    type: string
+                grievanceCategory:
+                    type: string
+                userType:
+                    type: string
+                emailAddress:
+                    type: string
+                userName:
+                    type: string
+                mobileNumber:
+                    type: string
+                userId:
+                    format: int64
+                    readOnly: true
+                    type: integer
+                createDate:
+                    description: The grievance creation date, in ISO 8601 format.
+                    type: string
+                    format: date-time
+                complaintDetails:
+                    type: string
+                responseDetails:
+                    type: string
+                responseDate:
+                    description: The grievance response date, in ISO 8601 format.
+                    type: string
+                    format: date-time
+                responseBy:
+                    format: int64
+                    type: integer
+            type: object
+paths:
+    "/grievances":
+        get:
+            description: Retrieves the grievance list. Results can be paginated, filtered, and searched.
+            operationId: getGrievanceList
+            parameters:
+                - in: query
+                  name: keywords
+                  schema:
+                      type: string
+                - in: query
+                  name: grievanceCategory
+                  schema:
+                      type: string
+                - in: query
+                  name: userType
+                  schema:
+                      type: string
+                - in: query
+                  name: fromDate
+                  schema:
+                      type: string
+                - in: query
+                  name: toDate
+                  schema:
+                      type: string
+                - in: query
+                  name: status
+                  schema:
+                      type: integer
+                - in: query
+                  name: filter
+                  schema:
+                      type: string
+                - in: query
+                  name: page
+                  schema:
+                      type: integer
+                - in: query
+                  name: pageSize
+                  schema:
+                      type: integer
+                - in: query
+                  name: sort
+                  schema:
+                      type: string
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Grievance"
+                                type: array
+                        application/xml:
+                            schema:
+                                items:
+                                    $ref: "#/components/schemas/Grievance"
+                                type: array
+                    description: ""
+            tags: ["Grievance"]
+        post:
+            description: Creates a new grievance
+            operationId: postGrievance
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Grievance"
+                    application/xml:
+                        schema:
+                            $ref: "#/components/schemas/Grievance"
+            responses:
+                201:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Grievance"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Grievance"
+                    description: ""
+            tags: ["Grievance"]
+    "/grievance/{grievanceId}":
+        get:
+            description: Retrieves the grievance details.
+            operationId: getGrievanceDetails
+            parameters:
+                - in: path
+                  name: grievanceId
+                  required: true
+                  schema:
+                      format: int64
+                      type: integer
+            responses:
+                200:
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Grievance"
+                        application/xml:
+                            schema:
+                                $ref: "#/components/schemas/Grievance"
+                    description: ""
+            tags: ["Grievance"]

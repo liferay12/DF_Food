@@ -1,0 +1,4 @@
+Bundle-Name: dgfood-poc-module
+Bundle-SymbolicName: bd.gov.dgfood.poc
+Bundle-Version: 1.0.0
+Export-Package: bd.gov.dgfood.poc.constants

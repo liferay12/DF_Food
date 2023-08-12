@@ -1,0 +1,9 @@
+apiDir: "../dgfood-headless-license-management-system-api/src/main/java"
+apiPackagePath: "dgfood.headless.license.management.system"
+application:
+    baseURI: "/dgfood-headless-license-management-system"
+    className: "DgfoodHeadlessLicenseManagementSystemApplication"
+    name: "DgfoodHeadlessLicenseManagementSystem"
+author: "Liferay"
+clientDir: "../dgfood-headless-license-management-system-client/src/main/java"
+testDir: "../dgfood-headless-license-management-system-test/src/testIntegration/java"

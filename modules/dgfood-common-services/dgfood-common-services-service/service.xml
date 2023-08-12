@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+<service-builder dependency-injector="ds"
+	auto-namespace-tables="false"
+	package-path="bd.gov.dgfood.common.services">
+	<namespace></namespace>
+
+	<entity local-service="true" name="Indent" remote-service="true"
+		uuid="true" table="DGF_Indent">
+		<!-- PK fields -->
+		<column name="indentId" primary="true" type="long" />
+		<column name="allocationId" type="long" />
+
+		<!-- Indent fields -->
+
+		<column name="commodity" type="String" />
+		<column name="commodityDescription" type="String" />
+		<column name="quantity" type="double" />
+		<column name="quantityUnit" type="String" />
+		<column name="requiredDeliveryDate" type="Date" />
+
+		<!-- Allotment Order fields -->
+
+		<column name="foodGrainissueDate" type="Date" />
+		<column name="netPrice" type="double" />
+		<column name="netPriceCurrencyKey" type="String" />
+		<column name="netValue" type="double" />
+		<column name="netValueCurrencyKey" type="String" />
+		<column name="salesOffice" type="String" />
+		<column name="depo" type="String" />
+		<column name="repaymentTerms" type="String" />
+		<column name="deliveryTerms" type="String" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="status" type="int" />
+		<column name="reason" type="int" />
+
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder return-type="Collection" name="AllocationId">
+			<finder-column name="allocationId" />
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="DeliveryOrder"
+		remote-service="true" uuid="true" table="DGF_DeliveryOrder">
+
+		<!-- PK fields -->
+		<column name="deliveryOrderId" primary="true" type="long" />
+		<column name="indentId" primary="true" type="long" />
+
+		<column name="deliveryOrderNo" type="String" />
+		<column name="customerNo" type="String" />
+		<column name="name" type="String" localized="true" />
+		<column name="doDate" type="Date" />
+		<column name="commodity" type="String" localized="true" />
+		<column name="commodityDescription" type="String"
+			localized="true" />
+		<column name="doQty" type="String" localized="true" />
+		<column name="doQtyUnit" type="String" localized="true" />
+		<column name="depo" type="String" localized="true" />
+		<column name="warehouseNo" type="String" />
+		<column name="khamaalNo" type="String" />
+		<column name="lUANo" type="String" />
+		<column name="lUADate" type="Date" />
+		<column name="bagUnit" type="String" localized="true" />
+		<column name="vehicleNo" type="String" />
+		<column name="gateKeeper" type="String" localized="true" />
+
+		<column name="goodsIssueDate" type="String" />
+		<column name="shipToParty" type="String" />
+		<column name="shipToPartyName" type="String" localized="true" />
+		<column name="deliveredQty" type="String" localized="true" />
+		<column name="deliveredQtyUnit" type="String" localized="true" />
+
+		<column name="companyId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="status" type="int" />
+
+	</entity>
+
+	<entity local-service="true" name="BankAccountInformation"
+		remote-service="true" uuid="true" table="DGF_BankAccountInformation">
+		<!-- PK fields -->
+		<column name="bankAccountInformationId" primary="true"
+			type="long" />
+		<!-- Audit fields -->
+		<column name="createdBy" type="long" />
+		<column name="createDate" type="Date" />
+		<!-- Other fields -->
+		<column name="accountNumber" type="String" />
+		<column name="bankName" type="String" />
+		<column name="branchName" type="String" />
+		<column name="routingCode" type="String" />
+		<column name="status" type="int" />
+		<column name="version" type="String" />
+		<column name="classPK" type="long" />
+		<column name="classNameId" type="long" />
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+	</entity>
+
+	<entity local-service="true" name="Attachment"
+		remote-service="true" table="DGF_Attachment">
+		<!-- PK fields -->
+		<column name="attachmentId" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="title" type="String" />
+		<column name="category" type="String" />
+		<column name="fileEntryId" type="long" />
+		<column name="openTextId" type="long" />
+		<column name="metadata" type="Map" />
+		<column name="classPK" type="long" />
+		<column name="className" type="String" />
+
+		<!-- Finder methods -->
+		<finder return-type="Collection" name="CPK_CN">
+			<finder-column name="classPK" />
+			<finder-column name="className" />
+		</finder>
+
+	</entity>
+
+	<entity local-service="true" name="AttachmentVersion"
+		remote-service="true" table="DGF_AttachmentVersion">
+		<!-- PK fields -->
+		<column name="attachmentVersionId" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="title" type="String" />
+		<column name="category" type="String" />
+		<column name="fileEntryId" type="long" />
+		<column name="openTextId" type="long" />
+		<column name="metadata" type="Map" />
+		<column name="classPK" type="long" />
+		<column name="className" type="String" />
+
+		<!-- Finder methods -->
+		<finder return-type="Collection" name="CPK_CN">
+			<finder-column name="classPK" />
+			<finder-column name="className" />
+		</finder>
+
+	</entity>
+	<entity local-service="true" name="Address"
+		remote-service="true" table="DGF_Address">
+		<!-- PK fields -->
+		<column name="addressId" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="region" type="long" />
+		<column name="district" type="long" />
+		<column name="upazilla" type="long" />
+		<column name="cityCorporationOrMunicipality" type="long" />
+		<column name="unionOrWard" type="long" />
+		<column name="zipCode" type="long" />
+		<column name="postOffice" type="String" />
+		<column name="villageOrRoad" type="String" />
+		<column name="mouzaOrMoholla" type="String" />
+		<column name="address" type="String" />
+		<column name="addressType" type="String" />
+		<column name="classPK" type="long" />
+		<column name="className" type="String" />
+
+		<!-- Finder methods -->
+		<finder return-type="Collection" name="CPK_CN">
+			<finder-column name="classPK" />
+			<finder-column name="className" />
+		</finder>
+
+		<finder return-type="Address" name="CPK_CN_AT">
+			<finder-column name="classPK" />
+			<finder-column name="className" />
+			<finder-column name="addressType" />
+		</finder>
+
+	</entity>
+
+	<entity local-service="true" name="AddressVersion"
+		remote-service="true" table="DGF_AddressVersion">
+		<!-- PK fields -->
+		<column name="addressVersionId" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="region" type="long" />
+		<column name="district" type="long" />
+		<column name="upazilla" type="long" />
+		<column name="cityCorporationOrMunicipality" type="long" />
+		<column name="unionOrWard" type="long" />
+		<column name="zipCode" type="long" />
+		<column name="postOffice" type="String" />
+		<column name="villageOrRoad" type="String" />
+		<column name="mouzaOrMoholla" type="String" />
+		<column name="address" type="String" />
+		<column name="addressType" type="String" />
+		<column name="classPK" type="long" />
+		<column name="className" type="String" />
+
+		<!-- Finder methods -->
+		<finder return-type="Collection" name="CPK_CN">
+			<finder-column name="classPK" />
+			<finder-column name="className" />
+		</finder>
+	</entity>
+	
+	<!-- User NID Details -->
+	<entity local-service="true" name="UserDetails"
+		remote-service="true" table="DGF_UserDetails">
+		<!-- PK fields -->
+		<column name="userDetailsId" primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="nationalId" type="String" />
+		<column name="applicantName" type="String" />
+		<column name="fatherName" type="String" />
+		<column name="motherName" type="String" />
+		<column name="gender" type="String" />
+		<column name="nidPhotoAttachmentId" type="long" />
+		<column name="nidDivision" type="String" />
+		<column name="nidDistrict" type="String" />
+		<column name="nidUpzilla" type="String" />
+		<column name="nidUnion" type="String" />
+		<column name="nidVillage" type="String" />
+		<column name="nidWard" type="String" />
+		<column name="nidZipCode" type="long" />
+		<column name="houseAddress" type="String" />
+		
+		<!-- Finder methods -->
+		<finder return-type="UserDetails" name="NationalId">
+			<finder-column name="nationalId" />
+		</finder>
+		
+	</entity>
+	
+	<!-- User Details -->
+	<entity local-service="true" name="DGFUsers"
+		remote-service="true" table="DGF_Users">
+		<!-- PK fields -->
+		<column name="dgfUserId"  primary="true" type="long" />
+		<!-- Other fields -->
+		<column name="nationalId" type="String" />
+		<column name="password" type="String" />
+		<column name="mobileNumber" type="String" />
+		<column name="email" type="String" />
+		<column name="birthDate" type="Date" />
+		<column name="maritalStatus" type="String" />
+		<column name="userId" type="long" />
+		<column name="presentAddressId" type="long" />
+		<column name="profileType" type="String" />
+		
+
+		<!-- Finder methods -->
+		<finder return-type="DGFUsers" name="NationalId">
+			<finder-column name="nationalId" />
+		</finder>
+	</entity>
+	<!--  -->
+	
+	
+	<entity local-service="true" name="Grievance"
+		remote-service="true" uuid="true" table="DGF_Grievance">
+		<!-- PK fields -->
+		<column name="grievanceId" primary="true" type="long" />
+		<column name="grievanceNumber" type="String" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="groupId" type="long"></column>
+		<!-- Other fields -->
+		<column name="grievanceCategory" type="long" />
+		<column name="userType" type="long" />
+		<column name="userName" type="String" />
+		<column name="userID" type="long" />
+		<column name="mobileNumber" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="complaintDetails" type="String" />
+		<column name="attachmentId" type="long" />
+		<column name="status" type="int" />
+		<column name="responseDetails" type="String" />
+		<column name="responseDate" type="Date" />
+		<column name="responseBy" type="long" />
+	</entity>
+
+	<entity local-service="true" name="UserLocation"
+		remote-service="true" uuid="true" table="DGF_UserLocation">
+		<!-- PK fields -->
+		<column name="userLocationId" primary="true" type="long" />
+
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long"></column>
+		<column name="groupId" type="long"></column>
+		<!-- Other fields -->
+		<column name="locationName" type="String" />
+		<column name="locationCode" type="String" />
+		<column name="locationId" type="long" />
+		<column name="locationType" type="String" />
+		<column name="userName" type="String" />
+		<column name="userId" type="long" />
+		<column name="roleKey" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedBy" type="long" />
+
+		<!-- Finder methods -->
+		<finder return-type="Collection" name="UserId">
+			<finder-column name="userId" />
+		</finder>
+		
+		<finder return-type="UserLocation" name="UI_LC">
+			<finder-column name="userId" />
+			<finder-column name="locationCode" />
+		</finder>
+		
+		<finder return-type="UserLocation" name="UI_LC_RK">
+			<finder-column name="userId" />
+			<finder-column name="locationCode" />
+			<finder-column name="roleKey" />
+		</finder>
+
+		<finder return-type="UserLocation" name="LocationId">
+			<finder-column name="locationId" />
+		</finder>
+
+		<finder return-type="UserLocation" name="RK_LC">
+			<finder-column name="roleKey" />
+			<finder-column name="locationCode" />
+		</finder>
+
+	</entity>
+
+	<!-- API Audit table is used to store the API call details(Both Out-bound 
+		and in-bound class) It is useful to check the failure request and for the 
+		performance analysis -->
+	<entity local-service="true" name="APIAudit"
+		remote-service="true" table="DGF_APIAudit">
+
+		<!-- PK fields -->
+		<column name="apiAuditId" primary="true" type="long"></column>
+
+		<!-- Audit Columns -->
+		<column name="title" type="String"></column>
+		<column name="description" type="String"></column>
+		<column name="sender" type="String"></column>
+		<column name="receiver" type="String"></column>
+		<column name="requestPayload" type="String"></column>
+		<column name="responsePayload" type="String"></column>
+		<column name="requestClassName" type="String"></column>
+		<column name="requestClassPK" type="long"></column>
+		<column name="bulkRequest" type="boolean"></column>
+		<column name="requestTime" type="Date"></column>
+		<column name="responseTime" type="Date"></column>
+
+		<!-- Audit fields -->
+		<column name="userId" type="long"></column>
+		<column name="createDate" type="Date"></column>
+	</entity>
+
+	<!-- If any APi call to MDM failes, the details will be stored in this table. -->
+	<entity local-service="true" name="MDMSyncStatus"
+		remote-service="true" table="DGF_MDMSyncStatus">
+
+		<!-- PK fields -->
+		<column name="mdmSyncStatusId" primary="true" type="long"></column>
+
+		<!-- MDM Call Details -->
+		<column name="userType" type="String"></column>
+		<column name="className" type="String"></column>
+		<column name="classPk" type="long"></column>
+		<column name="requestPayload" type="String"></column>
+		<column name="mdmEndPoint" type="String"></column>
+
+		<!-- Audit fields -->
+
+		<column name="userId" type="long"></column>
+		<column name="createDate" type="Date"></column>
+	</entity>
+
+	<!-- Exception -->
+
+	<exceptions>
+		<exception>UserLocationAlreadyExist</exception>
+		<exception>LocationAssigned</exception>
+		<exception>NoLocationExist</exception>
+	</exceptions>
+
+</service-builder>

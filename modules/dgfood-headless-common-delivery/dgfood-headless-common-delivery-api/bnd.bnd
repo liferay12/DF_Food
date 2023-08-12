@@ -1,0 +1,6 @@
+Bundle-Name: dgfood-headless-common-delivery-api
+Bundle-SymbolicName: bd.gov.dgfood.headless.common.delivery.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	bd.gov.dgfood.headless.common.delivery.dto.v1_0,\
+	bd.gov.dgfood.headless.common.delivery.resource.v1_0

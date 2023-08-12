@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+	<description>Provides the dgfood UI component tags, prefixed with <![CDATA[<code>dgfood-ui:</code>]]>.</description>
+	<tlib-version>1.0</tlib-version>
+	<short-name>dgfood-ui</short-name>
+	<uri>http://bd.gov.dgfood/tld/ui</uri>
+
+	<tag>
+		<name>nid-fields</name>
+		<tag-class>bd.gov.dgfood.taglib.servlet.taglib.NIDFieldsTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description>Are Fields disabled</description>
+			<name>isDisabled</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>Data to prepopulate</description>
+			<name>value</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>basic-fields</name>
+		<tag-class>bd.gov.dgfood.taglib.servlet.taglib.BasicFieldsTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description>Name Fields (Name, Mother Name, Father Name)</description>
+			<name>nameFields</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<description>Gender Field</description>
+			<name>genderField</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<description>Marital Status Field</description>
+			<name>maritalStatusField</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<description>Address Fields</description>
+			<name>addressField</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<description>Address Type</description>
+			<name>addressType</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>Are Fields disabled</description>
+			<name>isDisabled</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>Data to prepopulate</description>
+			<name>value</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>message</name>
+		<tag-class>bd.gov.dgfood.taglib.servlet.taglib.LabelTranslatorTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<description>label key</description>
+			<name>key</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>language id of request</description>
+			<name>languageId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>parameters to insert into label</description>
+			<name>parameters</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+
+	</tag>
+	<tag>
+		<name>ajax-search-container</name>
+		<tag-class>bd.gov.dgfood.taglib.servlet.taglib.AjaxSearchContainerTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description>The id of a Search Container element which should be wrapped in the div with id by liferay include tag, Note : Search container must be separate from main jsp page.</description>
+			<name>formId</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The id of a div element which wraps search container in the main page</description>
+			<name>containerId</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The resource id of a serve resource class</description>
+			<name>resourceId</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The search button of a form</description>
+			<name>buttonId</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The parent checkbox id to check all functionality</description>
+			<name>checkboxId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The search container id</description>
+			<name>searchContainerId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>workflow-task</name>
+		<tag-class>bd.gov.dgfood.taglib.servlet.taglib.WorkflowTaskTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description>The entity class name</description>
+			<name>className</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The entity primary key for which workflow is applied</description>
+			<name>classPK</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The url to redirect after admin submit workflowtask</description>
+			<name>redirect</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>attachment-preview</name>
+		<tag-class>bd.gov.dgfood.taglib.servlet.taglib.AttachmentPreviewTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description></description>
+			<name>title</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>cssClass</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>previewURL</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>extension</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>attachment-upload</name>
+		<tag-class>bd.gov.dgfood.taglib.servlet.taglib.AttachmentUpload</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description></description>
+			<name>name</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>id</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The entity class name</description>
+			<name>label</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The entity class name</description>
+			<name>required</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The entity class name</description>
+			<name>multiple</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The entity primary key for which workflow is applied</description>
+			<name>maxSize</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The url to redirect after admin submit workflowtask</description>
+			<name>accept</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The url to redirect after admin submit workflowtask</description>
+			<name>previewContainerId</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The class need to assign to input field</description>
+			<name>classes</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+		<tag>
+		<name>alert</name>
+		<tag-class>bd.gov.dgfood.taglib.servlet.taglib.AlertTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description></description>
+			<name>status</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>className</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>classPK</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description></description>
+			<name>type</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>bank-account-information</name>
+		<tag-class>bd.gov.dgfood.taglib.servlet.taglib.BankAccountInformation</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description>Are Fields disabled</description>
+			<name>isDisabled</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>otp</name>
+		<tag-class>bd.gov.dgfood.taglib.servlet.taglib.OTPPopUpTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description>Enter OTP</description>
+			<name>otpEntered</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

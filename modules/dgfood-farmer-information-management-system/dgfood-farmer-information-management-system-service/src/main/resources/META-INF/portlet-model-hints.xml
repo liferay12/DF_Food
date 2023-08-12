@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="bd.gov.dgfood.farmer.information.management.system.model.FarmerRegistration">
+		<field name="uuid" type="String" />
+		<field name="farmerRegistrationId" type="long" />
+		<field name="applicationNumber" type="String" />
+		<field name="nationalId" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="mobileNumber" type="String" />
+		<field name="dateOfBirth" type="Date" />
+		<field name="farmerName" type="String" />
+		<field name="fatherName" type="String" />
+		<field name="motherName" type="String" />
+		<field name="gender" type="int" />
+		<field name="maritalStatus" type="int" />
+		<field name="krishokCardNumber" type="String" />
+		<field name="cultivableLandSeason1" type="Map" />
+		<field name="cultivableLandSeason2" type="Map" />
+		<field name="cultivableLandSeason3" type="Map" />
+		<field name="farmerCategory " type="String" />
+		<field name="password " type="String" />
+		<field name="remarks" type="String" />
+		<field name="businessCode" type="String" />
+		<field name="version" type="double" />
+		<field name="userId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedBy" type="long" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+	<model name="bd.gov.dgfood.farmer.information.management.system.model.FarmerRegistrationVersion">
+		<field name="uuid" type="String" />
+		<field name="farmerRegistrationVersionId" type="long" />
+		<field name="applicationNumber" type="String" />
+		<field name="farmerRegistrationId" type="long" />
+		<field name="nationalId" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="mobileNumber" type="String" />
+		<field name="dateOfBirth" type="Date" />
+		<field name="farmerName" type="String" />
+		<field name="fatherName" type="String" />
+		<field name="motherName" type="String" />
+		<field name="gender" type="int" />
+		<field name="maritalStatus" type="int" />
+		<field name="krishokCardNumber" type="String" />
+		<field name="cultivableLandSeason1" type="Map" />
+		<field name="cultivableLandSeason2" type="Map" />
+		<field name="cultivableLandSeason3" type="Map" />
+		<field name="farmerCategory " type="String" />
+		<field name="password " type="String" />
+		<field name="remarks" type="String" />
+		<field name="businessCode" type="String" />
+		<field name="version" type="double" />
+		<field name="userId" type="String" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedBy" type="long" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+	<model name="bd.gov.dgfood.farmer.information.management.system.model.FarmerSalesProposal">
+		<field name="uuid" type="String" />
+		<field name="farmerSalesProposalId" type="long" />
+		<field name="applicationNumber" type="String" />
+		<field name="farmerRegistrationId" type="long" />
+		<field name="businessCode" type="String" />
+		<field name="currentSeason" type="String" />
+		<field name="foodGrainType" type="String" />
+		<field name="krishiCardNumber" type="String" />
+		<field name="pastProdDataSeason1" type="Map" />
+		<field name="pastProdDataSeason2" type="Map" />
+		<field name="pastProdDataSeason3" type="Map" />
+		<field name="succeedingProdDataSeason1" type="Map" />
+		<field name="succeedingProdDataSeason2" type="Map" />
+		<field name="succeedingProdDataSeason3" type="Map" />
+		<field name="grainProcuredInLast4Seasons " type="boolean" />
+		<field name="foodgranProcuredSeason1" type="Map" />
+		<field name="foodgranProcuredSeason2" type="Map" />
+		<field name="foodgranProcuredSeason3" type="Map" />
+		<field name="foodgranProcuredSeason4" type="Map" />
+		<field name="cultivableLandSeason1" type="Map" />
+		<field name="cultivableLandSeason2" type="Map" />
+		<field name="cultivableLandSeason3" type="Map" />
+		<field name="foodgrainReceivedStatus" type="int" />
+		<field name="receivedFoodgrainQty" type="Map" />
+		<field name="foodgrainReceivedDate" type="Date" />
+		<field name="paymentStatus" type="int" />
+		<field name="remarks" type="String" />
+		<field name="version" type="double" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="createdBy" type="long" />
+		<field name="modifiedBy" type="long" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+</model-hints>

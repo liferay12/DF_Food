@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="bd.gov.dgfood.license.management.system.model.FGLicenseDetails">
+		<field name="uuid" type="String" />
+		<field name="fgLicenseMasterId" type="long" />
+		<field name="nationalId" type="String" />
+		<field name="applicationNumber" type="String" />
+		<field name="applicantName" type="String" />
+		<field name="tradeLicenseNumber" type="String" />
+		<field name="tradeLicenseExpiryDate" type="Date" />
+		<field name="tradeLicenseIssuerCode" type="String" />
+		<field name="tradeLicenseIssuerCity" type="String" />
+		<field name="businessIdentificationNumber" type="String" />
+		<field name="taxIdentificationNumber" type="String" />
+		<field name="paymentChallanId" type="long" />
+		<field name="tradeLicenseDocId" type="long" />
+		<field name="businessIdentificationDocId" type="long" />
+		<field name="taxIdentfctDocId" type="long" />
+		<field name="bankStatementDocId" type="long" />
+		<field name="reviewComments" type="String" />
+		<field name="comments" type="String" />
+		<field name="duplicateLicenseReasonId" type="String" />
+		<field name="applicationType" type="String" />
+	</model>
+	<model name="bd.gov.dgfood.license.management.system.model.FGLicenseInfo">
+		<field name="uuid" type="String" />
+		<field name="fgLicenseInfoId" type="long" />
+		<field name="fgLicenseMasterId" type="long" />
+		<field name="fgLicenseMDMId" type="long" />
+		<field name="nationalId" type="String" />
+		<field name="applicationNumber" type="String" />
+		<field name="applicantName" type="String" />
+		<field name="tradeLicenseNumber" type="String" />
+		<field name="foodgrainLicenseNumber" type="String" />
+		<field name="foodgrainLicenseIssueDate" type="Date" />
+		<field name="foodgrainLicenseExpiryDate" type="Date" />
+		<field name="businessName" type="String" />
+		<field name="businessType" type="String" />
+		<field name="businessAddressId" type="long" />
+		<field name="version" type="double" />
+		<field name="applicationType" type="String" />
+		<field name="syncStatus" type="boolean" />
+		<field name="isExpired" type="boolean" />
+		<field name="paymentChallanId" type="long" />
+		<field name="division" type="String" />
+		<field name="district" type="String" />
+		<field name="upazila" type="String" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+	</model>
+	<model name="bd.gov.dgfood.license.management.system.model.FGLicenseMDMData">
+		<field name="uuid" type="String" />
+		<field name="fgLicenseMDMId" type="long" />
+		<field name="fgLicenseInfoId" type="long" />
+		<field name="fgLicenseMasterId" type="long" />
+		<field name="applicationMdmData" type="String" />
+	</model>
+</model-hints>

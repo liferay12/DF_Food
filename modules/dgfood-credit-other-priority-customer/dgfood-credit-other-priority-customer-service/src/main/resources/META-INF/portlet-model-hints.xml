@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="bd.gov.dgfood.credit.other.priority.customer.model.SalesCustomer">
+		<field name="uuid" type="String" />
+		<field name="salesCustomerId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="userId" type="long" />
+		<field name="userType" type="String" />
+		<field name="mobileNumber" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="title" type="String" />
+		<field name="contactPersonName" type="String" />
+		<field name="contactPersonDesignation" type="String" />
+		<field name="officeName" type="String" />
+		<field name="organizationName" type="String" />
+		<field name="organizationType" type="String" />
+		<field name="gender" type="int" />
+		<field name="salesCustomerCode" type="long" />
+		<field name="version" type="double" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+	<model name="bd.gov.dgfood.credit.other.priority.customer.model.SalesCustomerAllocation">
+		<field name="uuid" type="String" />
+		<field name="salesCustomerAllocationId" type="long" />
+		<field name="salesCustomerCode" type="long" />
+		<field name="salesCustomerName" type="String" />
+		<field name="allocationNumber" type="long" />
+		<field name="salesOrganization" type="String" />
+		<field name="distributionChannel" type="String" />
+		<field name="year" type="int" />
+		<field name="district" type="String" />
+		<field name="subDistrict" type="String" />
+		<field name="govOrderNumber" type="String" />
+		<field name="commodity" type="String" />
+		<field name="yearlyQty" type="double" />
+		<field name="yearlyQtyUnit" type="String" />
+		<field name="monthlyQty" type="double" />
+		<field name="monthlyQtyUnit" type="String" />
+		<field name="companyId" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="bd.gov.dgfood.credit.other.priority.customer.model.SalesCustomerVersion">
+		<field name="uuid" type="String" />
+		<field name="salesCustomerVersionId" type="long" />
+		<field name="salesCustomerId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="modifiedDate" type="Date" />
+		<field name="userId" type="long" />
+		<field name="userType" type="String" />
+		<field name="mobileNumber" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="title" type="String" />
+		<field name="contactPersonName" type="String" />
+		<field name="contactPersonDesignation" type="String" />
+		<field name="officeName" type="String" />
+		<field name="organizationName" type="String" />
+		<field name="organizationType" type="String" />
+		<field name="gender" type="int" />
+		<field name="version" type="double" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+	</model>
+</model-hints>
